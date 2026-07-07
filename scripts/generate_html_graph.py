@@ -1,5 +1,46 @@
 ﻿import openpyxl, os, glob, json
 
+def get_column_details(wb):
+    details = {}
+    for sn in wb.sheetnames:
+        if sn == "表目录": continue
+        sws = wb[sn]
+        cur_tbl = None
+        cols = []
+        in_hdr = False
+        for r in range(1, sws.max_row + 1):
+            c2 = sws.cell(r,2).value
+            c5 = sws.cell(r,5).value
+            c8 = sws.cell(r,8).value
+            if c2 and str(c2).strip() == "数据表名：" and c5:
+                if cur_tbl and cols:
+                    if cur_tbl not in details or len(cols) > len(details.get(cur_tbl, [])):
+                        details[cur_tbl] = cols
+                cur_tbl = str(c5).strip()
+                cols = []
+                in_hdr = False
+            elif c2 and str(c2).strip() == "编号":
+                c3 = sws.cell(r,3).value
+                c4 = sws.cell(r,4).value
+                if c3 and c4 and str(c3).strip() == "列名" and "列标题" in str(c4):
+                    in_hdr = True
+            elif in_hdr and c2:
+                try:
+                    float(str(c2).strip())
+                    cn = str(sws.cell(r,3).value).strip() if sws.cell(r,3).value else ""
+                    ct = str(sws.cell(r,4).value).strip() if sws.cell(r,4).value else cn
+                    tp = str(sws.cell(r,5).value).strip() if sws.cell(r,5).value else ""
+                    rr = str(sws.cell(r,11).value).strip() if sws.cell(r,11).value else ""
+                    if cn: cols.append({"n":cn,"t":ct,"tp":tp,"r":rr})
+                except:
+                    if c8 and str(c8).strip() == "返回主目录":
+                        in_hdr = False
+        if cur_tbl and cols:
+            if cur_tbl not in details or len(cols) > len(details.get(cur_tbl, [])):
+                details[cur_tbl] = cols
+    return details
+
+
 cwd = os.getcwd()
 import sys
 fp = sys.argv[1] if len(sys.argv) > 1 else None
@@ -103,6 +144,14 @@ print("Total edges:", len(edges))
 
 domain_colors = {"配置与方案":"#3b82f6","因子与水位":"#10b981","算法与计算":"#f59e0b","执行与结果":"#ef4444","日志审计":"#6b7280","辅助测试":"#8b5cf6","其他":"#94a3b8"}
 
+
+cd = get_column_details(wb)
+for n in nodes:
+    if n["id"] in cd:
+        n["cols"] = cd[n["id"]][:30]
+
+    if n["id"] in cd:
+        n["cols"] = cd[n["id"]][:30]
 data_json = json.dumps({"nodes":nodes,"edges":edges}, ensure_ascii=False)
 colors_json = json.dumps(domain_colors, ensure_ascii=False)
 
@@ -146,6 +195,22 @@ svg{position:fixed;top:0;left:0;width:100%;height:100%}
 .marker{fill:rgba(255,255,255,0.2)}
 #title-info{position:fixed;top:64px;left:50%;transform:translateX(-50%);z-index:5;font-size:14px;color:#94a3b8;pointer-events:none;text-align:center}
 #count-info{position:fixed;bottom:24px;right:24px;z-index:10;font-size:12px;color:#94a3b8;background:rgba(30,41,59,0.8);backdrop-filter:blur(8px);padding:8px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.04)}
+
+#detail-panel{position:fixed;top:56px;right:0;bottom:0;width:460px;z-index:25;background:rgba(15,23,42,0.97);backdrop-filter:blur(20px);border-left:1px solid rgba(255,255,255,0.08);transform:translateX(100%);transition:transform 0.25s cubic-bezier(0.4,0,0.2,1);overflow-y:auto;padding:24px}
+#detail-panel.open{transform:translateX(0)}
+#detail-close{position:sticky;top:0;float:right;cursor:pointer;font-size:24px;color:#64748b;padding:2px 8px;border-radius:4px;line-height:1}
+#detail-close:hover{color:#e2e8f0;background:rgba(255,255,255,0.06)}
+#detail-content .dp-title{font-size:16px;font-weight:600;color:#f1f5f9;word-break:break-all;margin-bottom:4px;padding-right:32px}
+#detail-content .dp-meta{font-size:12px;color:#64748b;margin-bottom:6px;line-height:1.8}
+#detail-content .dp-meta span{display:inline-block;padding:1px 8px;border-radius:4px;font-size:11px;margin-left:6px}
+#detail-content .dp-desc{color:#94a3b8;font-size:13px;margin-bottom:16px;padding:8px 12px;background:rgba(255,255,255,0.03);border-radius:6px}
+#detail-content table{width:100%;border-collapse:collapse;font-size:12px}
+#detail-content th{text-align:left;padding:6px 8px;color:#64748b;border-bottom:1px solid rgba(255,255,255,0.06);font-weight:500;font-size:11px}
+#detail-content td{padding:5px 8px;color:#cbd5e1;border-bottom:1px solid rgba(255,255,255,0.03);vertical-align:top}
+#detail-content td.col-name{font-family:monospace;color:#e2e8f0}
+#detail-content td.col-type{color:#64748b;font-size:11px;font-family:monospace}
+#detail-content tr:hover td{background:rgba(255,255,255,0.03)}
+#detail-content .dp-empty{color:#475569;font-size:13px;padding:24px 0;text-align:center}
 </style>
 </head>
 <body>
@@ -231,6 +296,30 @@ function hide(){
     nodeG.selectAll("text").attr("class","node-label");
     link.attr("class",d=>d.type==="cross"?"edge-line edge-cross":"edge-line").style("opacity",1);
 }
+
+function closeDetail(){
+    document.getElementById("detail-panel").classList.remove("open");
+}
+function showDetail(d){
+    var c=domainColors[d.domain]||"#94a3b8";
+    var cols=d.cols||[];
+    var h="<div class=\\"dp-title\\">"+d.id+"</div>";
+    h+="<div class=\\"dp-meta\\">"+d.bo+" <span style=\\"background:"+c+"22;color:"+c+";border:1px solid "+c+"44\\">"+d.domain+"</span></div>";
+    h+="<div class=\\"dp-desc\\">"+d.desc+"</div>";
+    if(cols.length>0){
+        h+="<table><tr><th>列名</th><th>标题</th><th>类型</th><th>备注</th></tr>";
+        for(var col of cols){
+            h+="<tr><td class=\\"col-name\\">"+col.n+"</td><td>"+col.t+"</td><td class=\\"col-type\\">"+col.tp+"</td><td>"+(col.r||"")+"</td></tr>";
+        }
+        h+="</table>";
+    }else{
+        h+="<div class=\\"dp-empty\\">暂无字段信息</div>";
+    }
+    document.getElementById("detail-content").innerHTML=h;
+    document.getElementById("detail-panel").classList.add("open");
+}
+// Click to show details
+nodeG.on("click",function(e,d){showDetail(d);});
 nodeG.on("mouseenter",show).on("mousemove",show).on("mouseleave",hide);
 
 sim.on("tick",()=>{
@@ -287,6 +376,7 @@ window.addEventListener("resize",()=>{
     sim.force("center",d3.forceCenter(w/2,h/2)).alpha(0.2).restart();
 });
 </script>
+<div id="detail-panel"><div id="detail-close" onclick="closeDetail()">&times;</div><div id="detail-content"></div></div>
 </body>
 </html>
 """
