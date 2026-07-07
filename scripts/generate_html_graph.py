@@ -116,6 +116,11 @@ html = """<!DOCTYPE html>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0f172a;color:#e2e8f0;overflow:hidden}
+#search{position:fixed;top:54px;left:50%;transform:translateX(-50%);z-index:15;width:340px}
+#search input{width:100%;padding:8px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.08);background:rgba(30,41,59,0.9);backdrop-filter:blur(12px);color:#e2e8f0;font-size:13px;outline:none;transition:border-color 0.2s;box-sizing:border-box}
+#search input:focus{border-color:rgba(255,255,255,0.25)}
+#search input::placeholder{color:#475569}
+.edge-line.search-dim{stroke:rgba(255,255,255,0.02)}
 #header{position:fixed;top:0;left:0;right:0;z-index:10;padding:12px 24px;background:rgba(15,23,42,0.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;gap:12px}
 #header h1{font-size:18px;font-weight:600}
 #header span{font-size:13px;color:#94a3b8}
@@ -147,6 +152,7 @@ svg{position:fixed;top:0;left:0;width:100%;height:100%}
 <div id="header"><h1>供应链云 · 数据字典</h1><span>库存计划模块 · """ + str(len(nodes)) + """张表 · """ + str(len(edges)) + """条关联</span></div>
 <div id="title-info">拖拽节点 · 滚轮缩放 · 悬停高亮关联路径</div>
 <div id="legend"></div>
+<div id="search"><input type="text" id="searchInput" placeholder="搜索表名 / 业务对象..." oninput="filterNodes(this.value)"></div>
 <div id="tooltip"></div>
 <div id="count-info">实线=父子表 · 虚线=跨对象引用</div>
 <svg id="graph"></svg>
@@ -232,6 +238,39 @@ sim.on("tick",()=>{
     linkLabel.attr("x",d=>(d.source.x+d.target.x)/2).attr("y",d=>(d.source.y+d.target.y)/2-6);
     nodeG.attr("transform",d=>"translate("+d.x+","+d.y+")");
 });
+
+
+function filterNodes(query){
+    var q=query.trim().toLowerCase();
+    if(!q){
+        nodeG.selectAll("circle").attr("opacity",1);
+        nodeG.selectAll("text").attr("class","node-label");
+        link.attr("class",function(d){return d.type==="cross"?"edge-line edge-cross":"edge-line";}).style("opacity",1);
+        document.getElementById("searchInput").placeholder="搜索表名 / 业务对象...";
+        return;
+    }
+    var matchCount=0;
+    nodeG.selectAll("circle").attr("opacity",function(d){
+        var m=d.label.toLowerCase().includes(q)||(d.bo||"").toLowerCase().includes(q)||(d.desc||"").toLowerCase().includes(q);
+        if(m)matchCount++;
+        return m?1:0.04;
+    });
+    nodeG.selectAll("text").attr("class",function(d){
+        var m=d.label.toLowerCase().includes(q)||(d.bo||"").toLowerCase().includes(q)||(d.desc||"").toLowerCase().includes(q);
+        return m?"node-label":"node-label dim";
+    });
+    link.attr("class",function(d){
+        var sm=d.source&&((d.source.label||"").toLowerCase().includes(q)||(d.source.bo||"").toLowerCase().includes(q)||(d.source.desc||"").toLowerCase().includes(q));
+        var tm=d.target&&((d.target.label||"").toLowerCase().includes(q)||(d.target.bo||"").toLowerCase().includes(q)||(d.target.desc||"").toLowerCase().includes(q));
+        var bc=sm&&tm?"":" search-dim";
+        return (d.type==="cross"?"edge-line edge-cross":"edge-line")+bc;
+    }).style("opacity",function(d){
+        var sm=d.source&&((d.source.label||"").toLowerCase().includes(q));
+        var tm=d.target&&((d.target.label||"").toLowerCase().includes(q));
+        return sm&&tm?1:0.04;
+    });
+    if(matchCount>0)document.getElementById("searchInput").placeholder=matchCount+" 条匹配";
+}
 
 window.addEventListener("resize",()=>{
     const w=window.innerWidth,h=window.innerHeight;
