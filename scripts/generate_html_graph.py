@@ -307,11 +307,21 @@ function showDetail(d){
     h+="<div class=\"dp-meta\">"+d.bo+" <span style=\"background:"+c+"22;color:"+c+";border:1px solid "+c+"44\">"+d.domain+"</span></div>";
     h+="<div class=\"dp-desc\">"+d.desc+"</div>";
     if(cols.length>0){
-        h+="<table><tr><th>列名</th><th>标题</th><th>类型</th><th>备注</th></tr>";
+        h+="<div style=\"font-size:12px;color:#64748b;margin-bottom:8px\">comment on table "+d.id+" is '<span style=\"color:#e2e8f0\">"+d.desc+"</span>';</div>";
+        h+="<div style=\"height:1px;background:rgba(255,255,255,0.06);margin:8px 0 12px 0\"></div>";
+        h+="<div style=\"overflow-y:auto;max-height:calc(100vh - 200px)\" class=\"col-list\">";
         for(var col of cols){
-            h+="<tr><td class=\"col-name\">"+col.n+"</td><td>"+col.t+"</td><td class=\"col-type\">"+col.tp+"</td><td>"+(col.r||"")+"</td></tr>";
+            var c=(col.r&&col.r!==col.n&&col.r!==col.t)?col.r:col.t;
+            h+="<div style=\"font-size:12px;font-family:monospace;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.03);line-height:1.7\">";
+            h+="<span style=\"color:#64748b\">comment on column </span>";
+            h+="<span style=\"color:#e2e8f0\">"+d.id+"."+col.n+"</span>";
+            h+="<span style=\"color:#64748b\"> is '</span>";
+            h+="<span style=\"color:#a5d6ff\">"+c+"</span>";
+            h+="<span style=\"color:#64748b\">';</span>";
+            h+="<span style=\"color:#475569;margin-left:8px;font-size:11px\">-- "+col.tp+"</span>";
+            h+="</div>";
         }
-        h+="</table>";
+        h+="</div>";
     }else{
         h+="<div class=\"dp-empty\">暂无字段信息</div>";
     }
