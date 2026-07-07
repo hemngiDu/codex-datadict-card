@@ -303,17 +303,17 @@ function closeDetail(){
 function showDetail(d){
     var c=domainColors[d.domain]||"#94a3b8";
     var cols=d.cols||[];
-    var h="<div class=\"dp-title\">"+d.id+"</div>";
-    h+="<div class=\"dp-meta\">"+d.bo+" <span style=\"background:"+c+"22;color:"+c+";border:1px solid "+c+"44\">"+d.domain+"</span></div>";
-    h+="<div class=\"dp-desc\">"+d.desc+"</div>";
+    var h="<div class=\\"dp-title\\">"+d.id+"</div>";
+    h+="<div class=\\"dp-meta\\">"+d.bo+" <span style=\\"background:"+c+"22;color:"+c+";border:1px solid "+c+"44\\">"+d.domain+"</span></div>";
+    h+="<div class=\\"dp-desc\\">"+d.desc+"</div>";
     if(cols.length>0){
         h+="<table><tr><th>列名</th><th>标题</th><th>类型</th><th>备注</th></tr>";
         for(var col of cols){
-            h+="<tr><td class=\"col-name\">"+col.n+"</td><td>"+col.t+"</td><td class=\"col-type\">"+col.tp+"</td><td>"+(col.r||"")+"</td></tr>";
+            h+="<tr><td class=\\"col-name\\">"+col.n+"</td><td>"+col.t+"</td><td class=\\"col-type\\">"+col.tp+"</td><td>"+(col.r||"")+"</td></tr>";
         }
         h+="</table>";
     }else{
-        h+="<div class=\"dp-empty\">暂无字段信息</div>";
+        h+="<div class=\\"dp-empty\\">暂无字段信息</div>";
     }
     document.getElementById("detail-content").innerHTML=h;
     document.getElementById("detail-panel").classList.add("open");
@@ -369,6 +369,11 @@ function filterNodes(query){
     });
     document.getElementById("searchInput").placeholder=matchIds.size+" 条匹配 \u00b7 "+visibleIds.size+" 关联节点";
 }
+
+// Show all nodes on initial load
+setTimeout(function() {
+    filterNodes(document.getElementById("searchInput").value);
+}, 100);
 
 window.addEventListener("resize",()=>{
     const w=window.innerWidth,h=window.innerHeight;
