@@ -249,27 +249,36 @@ function filterNodes(query){
         document.getElementById("searchInput").placeholder="搜索表名 / 业务对象...";
         return;
     }
-    var matchCount=0;
+    var matchIds=new Set();
+    nodes.forEach(function(n){
+        if(n.label.toLowerCase().includes(q)||(n.bo||"").toLowerCase().includes(q)||(n.desc||"").toLowerCase().includes(q)){
+            matchIds.add(n.id);
+        }
+    });
+    var visibleIds=new Set(matchIds);
+    edges.forEach(function(e){
+        var srcId=e.source.id||e.source;
+        var tgtId=e.target.id||e.target;
+        if(matchIds.has(srcId))visibleIds.add(tgtId);
+        if(matchIds.has(tgtId))visibleIds.add(srcId);
+    });
     nodeG.selectAll("circle").attr("opacity",function(d){
-        var m=d.label.toLowerCase().includes(q)||(d.bo||"").toLowerCase().includes(q)||(d.desc||"").toLowerCase().includes(q);
-        if(m)matchCount++;
-        return m?1:0.04;
+        return visibleIds.has(d.id)?1:0.03;
     });
     nodeG.selectAll("text").attr("class",function(d){
-        var m=d.label.toLowerCase().includes(q)||(d.bo||"").toLowerCase().includes(q)||(d.desc||"").toLowerCase().includes(q);
-        return m?"node-label":"node-label dim";
+        return visibleIds.has(d.id)?"node-label":"node-label dim";
     });
     link.attr("class",function(d){
-        var sm=d.source&&((d.source.label||"").toLowerCase().includes(q)||(d.source.bo||"").toLowerCase().includes(q)||(d.source.desc||"").toLowerCase().includes(q));
-        var tm=d.target&&((d.target.label||"").toLowerCase().includes(q)||(d.target.bo||"").toLowerCase().includes(q)||(d.target.desc||"").toLowerCase().includes(q));
-        var bc=sm&&tm?"":" search-dim";
-        return (d.type==="cross"?"edge-line edge-cross":"edge-line")+bc;
+        var srcId=d.source.id||d.source;
+        var tgtId=d.target.id||d.target;
+        var show=visibleIds.has(srcId)&&visibleIds.has(tgtId);
+        return (d.type==="cross"?"edge-line edge-cross":"edge-line")+(show?"":" search-dim");
     }).style("opacity",function(d){
-        var sm=d.source&&((d.source.label||"").toLowerCase().includes(q));
-        var tm=d.target&&((d.target.label||"").toLowerCase().includes(q));
-        return sm&&tm?1:0.04;
+        var srcId=d.source.id||d.source;
+        var tgtId=d.target.id||d.target;
+        return visibleIds.has(srcId)&&visibleIds.has(tgtId)?1:0.03;
     });
-    if(matchCount>0)document.getElementById("searchInput").placeholder=matchCount+" 条匹配";
+    document.getElementById("searchInput").placeholder=matchIds.size+" 条匹配 \u00b7 "+visibleIds.size+" 关联节点";
 }
 
 window.addEventListener("resize",()=>{
