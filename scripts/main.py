@@ -10,10 +10,17 @@ if os.path.isdir(path):
     path = os.path.join(path, files[0])
 print("Processing:", path)
 base = os.path.dirname(os.path.abspath(__file__))
-scripts = ["generate_sql.py", "generate_card.py", "generate_html_graph.py"]
-for s in scripts:
-    sp = os.path.join(base, s)
-    r = subprocess.run([sys.executable, sp, path], capture_output=True, text=True)
-    print(r.stdout.strip())
-    if r.returncode != 0: print("ERROR:", r.stderr.strip())
-print("\nDone!")
+
+print("\n[1/3] Generating SQL comments...")
+r = subprocess.run([sys.executable, os.path.join(base, "generate_sql.py"), path], capture_output=True, text=True)
+print(r.stdout.strip())
+
+print("[2/3] Generating knowledge card...")
+r = subprocess.run([sys.executable, os.path.join(base, "generate_card.py"), path], capture_output=True, text=True)
+print(r.stdout.strip())
+
+print("[3/3] Generating search graph (on-demand loading)...")
+r = subprocess.run([sys.executable, os.path.join(base, "generate_search_graph.py"), path], capture_output=True, text=True)
+print(r.stdout.strip())
+
+print("\nDone! Files generated alongside your Excel file.")

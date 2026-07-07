@@ -58,3 +58,36 @@ python scripts/generate_all.py <Excel文件路径>
 - 依赖 openpyxl 库
 - 输入文件必须是标准的金蝶云苍穹数据字典导出格式
 - HTML 需要联网加载 D3.js 库（CDN）
+
+
+## 搜索发现模式（适用于5万+表）
+
+对于大规模数据字典，使用 `generate_search_graph.py` 生成搜索优先的交互式图谱：
+
+### 架构
+```
+output/
+├── graph.html        ← 搜索界面（轻量壳，~37KB）
+├── index.json        ← 搜索索引（全量，但只有id/名称/领域）
+├── chunks/           ← 按业务对象分片，按需加载
+└── columns/          ← 按表分片，点击节点时加载
+```
+
+### 使用方法
+```bash
+python scripts/generate_search_graph.py <Excel文件路径>
+```
+
+### 打开方式
+因为用了 `fetch()` 加载数据文件，建议用本地服务器打开：
+```bash
+cd <输出目录>
+python -m http.server 8080
+# 浏览器打开 http://localhost:8080/graph.html
+```
+
+### 交互流程
+1. 页面打开 → 只加载 index.json（快速）
+2. 输入搜索 → 实时模糊匹配下拉建议
+3. 选择结果 → 自动加载关联业务对象的子图（~1KB/BO）
+4. 搜索框内容自动同步到 URL 参数 `?q=`，可分享/收藏
