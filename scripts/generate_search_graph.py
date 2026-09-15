@@ -142,7 +142,7 @@ def main():
     for tbl, cols in col_details.items():
         cf = os.path.join(out_columns, tbl + ".json")
         with open(cf, "w", encoding="utf-8") as f:
-            json.dump(cols[:50], f, ensure_ascii=False)
+            json.dump(cols, f, ensure_ascii=False)
     print("Columns:", len(col_details), "files")
     
     # Save chunk files (per BO)

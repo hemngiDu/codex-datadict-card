@@ -1,26 +1,41 @@
 #!/usr/bin/env python3
-"""Data Dictionary Card Generator - entry point"""
-import sys, os, subprocess
-path = sys.argv[1] if len(sys.argv) > 1 else None
-if not path or not os.path.exists(path):
-    print("Usage: python main.py <Excel file or directory>"); sys.exit(1)
-if os.path.isdir(path):
-    files = [f for f in os.listdir(path) if f.endswith(".xlsx") and not f.startswith("~$")]
-    if not files: print("No xlsx found"); sys.exit(1)
-    path = os.path.join(path, files[0])
-print("Processing:", path)
-base = os.path.dirname(os.path.abspath(__file__))
+"""Generate the legacy outputs plus semantic metadata for each workbook."""
+import argparse
+from pathlib import Path
+import subprocess
+import sys
 
-print("\n[1/3] Generating SQL comments...")
-r = subprocess.run([sys.executable, os.path.join(base, "generate_sql.py"), path], capture_output=True, text=True)
-print(r.stdout.strip())
 
-print("[2/3] Generating knowledge card...")
-r = subprocess.run([sys.executable, os.path.join(base, "generate_card.py"), path], capture_output=True, text=True)
-print(r.stdout.strip())
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("path")
+    args = parser.parse_args()
+    path = Path(args.path).resolve()
+    files = sorted(p for p in path.glob("*.xlsx") if not p.name.startswith("~$")) if path.is_dir() else [path]
+    if not files or any(not p.is_file() for p in files):
+        parser.error("No Excel files found")
+    scripts = Path(__file__).resolve().parent
+    for file in files:
+        for name in ("generate_sql.py", "generate_card.py", "generate_search_graph.py"):
+            # Separate graph directories prevent multi-workbook index/chunk collisions.
+            if name == "generate_search_graph.py":
+                import shutil
+                target = file.parent / (file.stem + "_graph")
+                target.mkdir(exist_ok=True)
+                import tempfile
+                with tempfile.NamedTemporaryFile(suffix=".xlsx", dir=target, delete=False) as temporary:
+                    graph_input = Path(temporary.name)
+                shutil.copy2(file, graph_input)
+                try:
+                    subprocess.run([sys.executable, str(scripts / name), str(graph_input)], check=True)
+                finally:
+                    graph_input.unlink()
+            else:
+                subprocess.run([sys.executable, str(scripts / name), str(file)], check=True)
+        subprocess.run([sys.executable, str(scripts / "semantic.py"), "build", str(file),
+                        "--output", str(file.with_name(file.stem + "_semantic.json"))], check=True)
+    print("Done")
 
-print("[3/3] Generating search graph (on-demand loading)...")
-r = subprocess.run([sys.executable, os.path.join(base, "generate_search_graph.py"), path], capture_output=True, text=True)
-print(r.stdout.strip())
 
-print("\nDone! Files generated alongside your Excel file.")
+if __name__ == "__main__":
+    main()
