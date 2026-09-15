@@ -1,15 +1,15 @@
 ---
 name: codex-datadict-card
-description: 从金蝶云苍穹 Excel 数据字典发现候选表、检索字段、读取局部数据库上下文，并生成带证据的关系候选、Markdown/ER、SQL 注释和 D3 图谱。适用于理解已有数据模型和辅助 SQL 编写。
+description: 当用户提供金蝶云苍穹导出的 Excel 数据字典并用自然语言询问表、字段、关联或 SQL 时，自动发现候选表、读取局部上下文并报告关系证据；也可按需生成 Markdown、注释 SQL 和图谱。
 ---
 
 # 数据库语义理解
 
-在 Skill 所在目录运行命令；输入路径可使用绝对路径。先安装 `pip install -r requirements.txt`。
+用户只需提供 Excel 文件或可访问的路径，以及要查的业务问题。不要要求用户手动运行下面的命令。由 Codex 在 Skill 所在目录完成依赖检查、建模和检索，并用业务语言解释结果。第一次使用时若缺少依赖，安装 `requirements.txt`。
 
 ## 发现表与字段
 
-1. 对金蝶导出建立模型：
+1. 如无现成的匹配模型，对金蝶导出建立模型：
    `python scripts/semantic.py build <字典.xlsx> --output <模型.json>`
    可追加 `--config examples/config.json` 和 `--sql <报表.sql> --dialect postgres`。
 2. 根据用户业务词检索：
@@ -18,7 +18,9 @@ description: 从金蝶云苍穹 Excel 数据字典发现候选表、检索字段
 3. 只读取入选表：
    `python scripts/semantic.py context <模型.json> t_pm_purorder`
    返回这些表的完整字段、直接关系以及邻居表名。根据问题需要再读取邻居，避免把整个字典加载进上下文。
-4. 编写 SQL 前核对关联列、业务口径、租户/组织/语言/状态条件。未提供的业务语义不能自行补成事实。
+4. 向用户先给出候选表、关键字段、关系证据和不确定处；只有用户要求写 SQL 时才写。编写 SQL 前核对关联列、业务口径、租户/组织/语言/状态条件。未提供的业务语义不能自行补成事实。
+
+模型可放在当前任务的临时工作目录；只有用户要求保存产物时才写入指定输出位置。复用模型前核对来源文件，避免把另一份字典的结果用于当前问题。若用户没有提供可访问的 Excel 或模型文件，简短说明所需输入。
 
 ## 关系证据
 
@@ -28,7 +30,7 @@ description: 从金蝶云苍穹 Excel 数据字典发现候选表、检索字段
 
 ## 生成原有文档与图谱
 
-`python scripts/generate_all.py <Excel文件或目录>`
+仅当用户要求生成卡片、注释或图谱时运行 `python scripts/generate_all.py <Excel文件或目录>`。
 
 生成 `*_comments.sql`、`*_datadict_card.md`、`*_semantic.json` 和 `<名称>_graph/graph.html`。目录模式处理所有非临时 xlsx 文件，失败返回非零状态。
 

@@ -2,7 +2,17 @@
 
 从金蝶云苍穹 Excel 数据字典查找表、定位字段、读取局部上下文并发现关联候选，兼容原有 SQL Comment、Markdown/Mermaid ER 和 D3 图谱。
 
-## 快速开始
+## 给 Codex 使用（推荐）
+
+安装到 Codex 后，把金蝶数据字典 Excel 文件交给 Codex，并直接说：
+
+> 这是供应链数据字典。帮我找“采购订单的供应商、物料和采购数量”涉及哪些表、字段和关联；标出推断关系的证据。
+
+Codex 会自行读取 Excel、建立语义模型、搜索候选表并解释结果。只有你要求“生成卡片/图谱/注释 SQL”时才生成这些文件。无须记住 build、search、context 命令。关联是候选，实际 SQL 还需核对业务条件。
+
+首次安装：把此仓库放到 Codex 的 `skills/codex-datadict-card` 目录，让 Codex 重新加载技能。你也可以直接让 Codex 帮你安装。安装一次后，日常只需提供 Excel 和问题；Python 依赖由 Codex 按 Skill 指引处理。
+
+## 命令行使用（可选）
 
 Python 3.10+：
 
