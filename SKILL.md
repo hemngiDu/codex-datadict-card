@@ -41,3 +41,7 @@ description: 当用户提供金蝶云苍穹导出的 Excel 数据字典并用自
 ## 已有供应链知识库与建表
 
 用户只说业务对象名称时，先在 `knowledge/supply-chain/index.json` 精确匹配 references.business_name；读取对应分块，列出全部物理表和字段注释，并展示候选关联、字段与证据。相似业务对象单独提示。用户要求 PostgreSQL 建表时运行 `python scripts/business_ddl.py knowledge/supply-chain <业务对象名称> --output <输出.sql>`，解释冲突、缺失或不支持类型并停止生成，不猜测。所有推断均为候选，不自动创建外键或执行 SQL。
+
+## 跨字典关系
+
+查询供应链表时同时读取 knowledge/supply-chain/base-service-relations.json，按 source_table 匹配。relationships 由字段备注实体标识、基础服务云工作表实体标识、主表和单列主键推断，均为待验证候选；unresolved 保存无法唯一解析的实体，禁止猜测目标表或 JOIN。报告原始备注和证据，具体主键连接仍须业务核实。
