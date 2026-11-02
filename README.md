@@ -74,3 +74,7 @@ python -m unittest discover -s tests -v
 ```
 
 测试覆盖候选表排序、字段命中、类型冲突、复合主键保守处理、SQL 作用域与表达式过滤及 Excel→SQL/Markdown/D3/语义 JSON。当前未用真实客户工作簿或数据库验证。检索逐表扫描，内存保存元数据，尚未对 5 万表做性能承诺；大型部署可按同一模型接口引入倒排索引。
+
+## 图谱中的字段级候选关系
+
+运行 `python scripts/generate_all.py demo/sample.xlsx --sql examples/joins.sql --dialect postgres`。`--sql` 支持多个文件，`--config` 可指定手工关系配置。搜索后加载一跳候选邻居，连线显示字段；鼠标悬停查看 JOIN 条件及证据。所有关系均需核对，SQL 仅解析不执行。图谱需要本地 HTTP 服务及 D3 CDN。

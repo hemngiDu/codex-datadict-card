@@ -120,6 +120,12 @@ def main():
         if src in node_ids and tgt in node_ids:
             edges.append({"source":src,"target":tgt,"label":lbl,"type":"cross"})
     
+    # Field-level candidate relationships from the evidence-bearing semantic model.
+    relationships = []
+    if len(sys.argv) > 2:
+        with open(sys.argv[2], encoding="utf-8") as f:
+            relationships = json.load(f).get("relationships", [])
+    relationships = [r for r in relationships if r["source_table"] in node_ids and r["target_table"] in node_ids]
     # Group by BO
     bo_tables = {}
     for n in nodes:
@@ -174,6 +180,7 @@ def main():
     xref_edges = [e for e in edges if e.get("type") == "cross"]
     xref_json = json.dumps(xref_edges, ensure_ascii=False)
     colors_json = json.dumps(DOMAIN_COLORS, ensure_ascii=False)
+    relationships_json = json.dumps(relationships, ensure_ascii=False).replace("</", "<\\/")
     
     # Generate HTML
     html = f'''<!DOCTYPE html>
@@ -248,6 +255,7 @@ svg{{position:fixed;top:0;left:0;width:100%;height:100%}}
 <script>
 const domainColors = ''' + colors_json + r''';
 const xrefEdges = ''' + xref_json + r''';
+const relationships = ''' + relationships_json + r''';
 let loadedChunks = new Set();
 let loadedNodeData = new Set();
 let indexData = [];
@@ -319,9 +327,15 @@ function doSearch(q){
     });
     if(matchIds.size===0){ document.getElementById("status").textContent="无匹配结果"; return; }
     
+    // Load related tables, including those in other business objects.
+    const relatedIds = new Set(matchIds);
+    relationships.forEach(r=>{
+        if(matchIds.has(r.source_table)) relatedIds.add(r.target_table);
+        if(matchIds.has(r.target_table)) relatedIds.add(r.source_table);
+    });
     // Find which chunks to load
     const neededChunks = new Set();
-    matchIds.forEach(id=>{
+    relatedIds.forEach(id=>{
         const entry = indexData.find(d=>d.id===id);
         if(entry) neededChunks.add(entry.chunk);
     });
@@ -357,6 +371,10 @@ function renderGraph(matchIds){
         if(matchIds.has(tgt)) visibleIds.add(src);
     });
     
+    relationships.forEach(r=>{
+        if(matchIds.has(r.source_table)) visibleIds.add(r.target_table);
+        if(matchIds.has(r.target_table)) visibleIds.add(r.source_table);
+    });
     // Filter nodes & edges
     const visNodes = allNodes.filter(n=>visibleIds.has(n.id));
     const visEdges = allEdges.filter(e=>{
@@ -374,6 +392,12 @@ function renderGraph(matchIds){
         }
     });
     
+    relationships.forEach(r=>{
+        if(visibleIds.has(r.source_table) && visibleIds.has(r.target_table)){
+            visEdges.push({source:r.source_table,target:r.target_table,type:"candidate",
+                label:r.source_column+" = "+r.target_column, relation:r});
+        }
+    });
     // Clean up old graph
     d3.select("svg").selectAll("*:not(defs)").remove();
     
@@ -403,8 +427,10 @@ function renderGraph(matchIds){
         .attr("class",d=>d.type==="cross"?"edge-line edge-cross":"edge-line")
         .attr("marker-end",d=>"url(#a"+d._idx+")");
     
+    link.append("title").text(d=>d.relation ?
+        "候选关系（未验证）\nJOIN 条件: "+d.relation.source_table+"."+d.relation.source_column+" = "+d.relation.target_table+"."+d.relation.target_column+"\n依据: "+d.relation.evidence.map(e=>e.source+": "+e.detail).join("; ")+"\n评分: "+d.relation.confidence+"（规则分数，非概率）" : "目录关系："+d.label);
     linkLabel = g.append("g").selectAll("text").data(visEdges).join("text")
-        .attr("class","edge-label").text(d=>d.label.substring(0,14));
+        .attr("class","edge-label").text(d=>d.type==="candidate" ? d.label : d.label.substring(0,14));
     
     nodeG = g.append("g").selectAll("g").data(visNodes).join("g")
         .call(d3.drag().on("start",(e,d)=>{if(!e.active)sim.alphaTarget(0.3).restart();d.fx=d.x;d.fy=d.y;})
@@ -503,7 +529,6 @@ window.addEventListener("resize",()=>{
 </html>'''
     
     with open(out_graph, "w", encoding="utf-8") as f:
-        f.write(html)
         f.write(html)
     
     print("HTML:", out_graph)
