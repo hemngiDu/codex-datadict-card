@@ -1,0 +1,1499 @@
+{
+  "source": "基础服务云.xlsx",
+  "tables": [
+    {
+      "name": "tk_jml_weighperiod",
+      "business_name": "过磅月结",
+      "description": "过磅月结-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "过磅月结",
+          "description": "过磅月结-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fcreateorgid",
+          "description": "创建组织",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "0",
+          "primary_key": false,
+          "remarks": "业务单元 bos_org"
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "fmodifierid",
+          "description": "修改人",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "0",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fcreatetime",
+          "description": "创建时间",
+          "type": "timestamp",
+          "length": "",
+          "scale": "",
+          "nullable_marker": "否",
+          "default": "",
+          "primary_key": false,
+          "remarks": "创建时间"
+        },
+        {
+          "name": "forgid",
+          "description": "组织",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "0",
+          "primary_key": false,
+          "remarks": "业务单元 bos_org"
+        },
+        {
+          "name": "fsrccreateorgid",
+          "description": "原创建组织",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "0",
+          "primary_key": false,
+          "remarks": "业务单元 bos_org"
+        },
+        {
+          "name": "fk_jml_currentperiod",
+          "description": "当前期间",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "0",
+          "primary_key": false,
+          "remarks": "会计期间 bd_period"
+        },
+        {
+          "name": "fmodifytime",
+          "description": "修改时间",
+          "type": "timestamp",
+          "length": "",
+          "scale": "",
+          "nullable_marker": "否",
+          "default": "",
+          "primary_key": false,
+          "remarks": "修改时间"
+        },
+        {
+          "name": "fctrlstrategy",
+          "description": "控制策略",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "控制策略,枚举: 1 :逐级分配  2 :自由分配  5 :全局共享  6 :管控范围内共享  7 :私有"
+        },
+        {
+          "name": "fstatus",
+          "description": "数据状态",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "数据状态,枚举: A :暂存  B :已提交  C :已审核"
+        },
+        {
+          "name": "fcreatorid",
+          "description": "创建人",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "0",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fmasterid",
+          "description": "主数据内码",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "否",
+          "default": "",
+          "primary_key": false,
+          "remarks": "主数据内码"
+        },
+        {
+          "name": "fk_jml_useorg",
+          "description": "业务组织",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "0",
+          "primary_key": false,
+          "remarks": "业务单元 bos_org"
+        },
+        {
+          "name": "fsourcedataid",
+          "description": "原资料id",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "否",
+          "default": "",
+          "primary_key": false,
+          "remarks": "原资料id"
+        },
+        {
+          "name": "fbitindex",
+          "description": "位图",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "否",
+          "default": "",
+          "primary_key": false,
+          "remarks": "位图"
+        },
+        {
+          "name": "fk_jml_startperiod",
+          "description": "初始期间",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "0",
+          "primary_key": false,
+          "remarks": "会计期间 bd_period"
+        },
+        {
+          "name": "fenable",
+          "description": "使用状态",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "使用状态,枚举: 0 :禁用  1 :可用"
+        },
+        {
+          "name": "fnumber",
+          "description": "编码",
+          "type": "varchar",
+          "length": "30.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "编码"
+        },
+        {
+          "name": "fsourcebitindex",
+          "description": "原资料位图",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "否",
+          "default": "",
+          "primary_key": false,
+          "remarks": "原资料位图"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_weighperiod_l",
+      "business_name": "过磅月结",
+      "description": "过磅月结-多语言表",
+      "parent": "tk_jml_weighperiod",
+      "references": [
+        {
+          "business_name": "过磅月结",
+          "description": "过磅月结-多语言表",
+          "parent": "tk_jml_weighperiod"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "0",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "flocaleid",
+          "description": "flocaleid",
+          "type": "varchar",
+          "length": "10.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "localeid"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "varchar",
+          "length": "36.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
+          "primary_key": true,
+          "remarks": "pkid"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_weighperiod_u",
+      "business_name": "过磅月结",
+      "description": "过磅月结-使用范围表",
+      "parent": "tk_jml_weighperiod",
+      "references": [
+        {
+          "business_name": "过磅月结",
+          "description": "过磅月结-使用范围表",
+          "parent": "tk_jml_weighperiod"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fcreateorgid",
+          "description": "fcreateorgid",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "否",
+          "default": "",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fdataid",
+          "description": "fdataid",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
+          "primary_key": true,
+          "remarks": ""
+        },
+        {
+          "name": "fuseorgid",
+          "description": "fuseorgid",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
+          "primary_key": true,
+          "remarks": ""
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_ysentryentity",
+      "business_name": "物料",
+      "description": "验收标准-子表",
+      "parent": "t_bd_material",
+      "references": [
+        {
+          "business_name": "物料",
+          "description": "验收标准-子表",
+          "parent": "t_bd_material"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fk_jml_oprocurement_org",
+          "description": "采购组织",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "0",
+          "primary_key": false,
+          "remarks": "业务单元 bos_org"
+        },
+        {
+          "name": "fk_jml_areaentry",
+          "description": "面积(m²)",
+          "type": "numeric",
+          "length": "23.0",
+          "scale": "4.0",
+          "nullable_marker": "否",
+          "default": "",
+          "primary_key": false,
+          "remarks": "面积(m²)"
+        },
+        {
+          "name": "fseq",
+          "description": "分录行号",
+          "type": "int4",
+          "length": "32.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "0",
+          "primary_key": false,
+          "remarks": "分录行号"
+        },
+        {
+          "name": "fk_jml_wide",
+          "description": "宽(mm)",
+          "type": "numeric",
+          "length": "23.0",
+          "scale": "",
+          "nullable_marker": "否",
+          "default": "",
+          "primary_key": false,
+          "remarks": "宽(mm)"
+        },
+        {
+          "name": "fentryid",
+          "description": "fentryid",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fk_jml_long",
+          "description": "长(mm)",
+          "type": "numeric",
+          "length": "23.0",
+          "scale": "",
+          "nullable_marker": "否",
+          "default": "",
+          "primary_key": false,
+          "remarks": "长(mm)"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_zbzczjb_01",
+      "business_name": "资本支出中间表01",
+      "description": "资本支出中间表01-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "资本支出中间表01",
+          "description": "资本支出中间表01-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fk_jml_yshmc",
+          "description": "预算号名称",
+          "type": "varchar",
+          "length": "2000.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "预算号名称"
+        },
+        {
+          "name": "fk_jml_sjlxbm",
+          "description": "数据类型编码",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "数据类型编码"
+        },
+        {
+          "name": "fk_jml_faccountid",
+          "description": "度量值",
+          "type": "varchar",
+          "length": "2000.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "度量值"
+        },
+        {
+          "name": "fk_jml_zhmc",
+          "description": "综合名称",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "综合名称"
+        },
+        {
+          "name": "fk_jml_xsbm",
+          "description": "线索编码",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "线索编码"
+        },
+        {
+          "name": "fmodifytime",
+          "description": "修改时间",
+          "type": "timestamp",
+          "length": "",
+          "scale": "",
+          "nullable_marker": "否",
+          "default": "",
+          "primary_key": false,
+          "remarks": "修改时间"
+        },
+        {
+          "name": "fk_jml_orgname",
+          "description": "组织名称",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "组织名称"
+        },
+        {
+          "name": "fk_jml_zhbm",
+          "description": "综合编码",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "综合编码"
+        },
+        {
+          "name": "fcreatorid",
+          "description": "创建人",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "0",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fk_jml_orgnumber",
+          "description": "组织编码",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "组织编码"
+        },
+        {
+          "name": "fk_jml_bbbm",
+          "description": "版本编码",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "版本编码"
+        },
+        {
+          "name": "fk_jml_yshbm",
+          "description": "预算号编码",
+          "type": "varchar",
+          "length": "2000.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "预算号编码"
+        },
+        {
+          "name": "fk_jml_yskmcm",
+          "description": "预算科目名称",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "预算科目名称"
+        },
+        {
+          "name": "fbillno",
+          "description": "单据编号",
+          "type": "varchar",
+          "length": "30.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "单据编号"
+        },
+        {
+          "name": "fmodifierid",
+          "description": "修改人",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "0",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fk_jml_dlmc",
+          "description": "度量名称",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "度量名称"
+        },
+        {
+          "name": "fbillstatus",
+          "description": "单据状态",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "单据状态,枚举: A :暂存  B :已提交  C :已审核"
+        },
+        {
+          "name": "fcreatetime",
+          "description": "创建时间",
+          "type": "timestamp",
+          "length": "",
+          "scale": "",
+          "nullable_marker": "否",
+          "default": "",
+          "primary_key": false,
+          "remarks": "创建时间"
+        },
+        {
+          "name": "fk_jml_ysqjmc",
+          "description": "预算期间名称",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "预算期间名称"
+        },
+        {
+          "name": "fk_jml_bbmc",
+          "description": "版本名称",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "版本名称"
+        },
+        {
+          "name": "fk_jml_bdlxmc",
+          "description": "变动类型名称",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "变动类型名称"
+        },
+        {
+          "name": "fauditdate",
+          "description": "审核日期",
+          "type": "timestamp",
+          "length": "",
+          "scale": "",
+          "nullable_marker": "否",
+          "default": "",
+          "primary_key": false,
+          "remarks": "审核日期"
+        },
+        {
+          "name": "fk_jml_dlbm",
+          "description": "度量编码",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "度量编码"
+        },
+        {
+          "name": "fk_jml_bzmc",
+          "description": "币种名称",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "币种名称"
+        },
+        {
+          "name": "fk_jml_bdlxbm",
+          "description": "变动类型编码",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "变动类型编码"
+        },
+        {
+          "name": "fk_jml_yskmbm",
+          "description": "预算科目编码",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "预算科目编码"
+        },
+        {
+          "name": "fk_jml_xsmc",
+          "description": "线索名称",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "线索名称"
+        },
+        {
+          "name": "fk_jml_bzbm",
+          "description": "币种编码",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "币种编码"
+        },
+        {
+          "name": "fk_jml_sjlxmc",
+          "description": "数据类型名称",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "数据类型名称"
+        },
+        {
+          "name": "fauditorid",
+          "description": "审核人",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "0",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fk_jml_ysqjbm",
+          "description": "预算期间编码",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "预算期间编码"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_zywarehouse",
+      "business_name": "直营公司仓库",
+      "description": "直营公司仓库-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "直营公司仓库",
+          "description": "直营公司仓库-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "fstatus",
+          "description": "数据状态",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "数据状态,枚举: A :暂存  B :已提交  C :已审核"
+        },
+        {
+          "name": "fmodifierid",
+          "description": "修改人",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "0",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fcreatorid",
+          "description": "创建人",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "0",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fmasterid",
+          "description": "主数据内码",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "否",
+          "default": "",
+          "primary_key": false,
+          "remarks": "主数据内码"
+        },
+        {
+          "name": "fk_jml_org",
+          "description": "组织",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "0",
+          "primary_key": false,
+          "remarks": "业务单元 bos_org"
+        },
+        {
+          "name": "fcreatetime",
+          "description": "创建时间",
+          "type": "timestamp",
+          "length": "",
+          "scale": "",
+          "nullable_marker": "否",
+          "default": "",
+          "primary_key": false,
+          "remarks": "创建时间"
+        },
+        {
+          "name": "fenable",
+          "description": "使用状态",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "使用状态,枚举: 0 :禁用  1 :可用"
+        },
+        {
+          "name": "fnumber",
+          "description": "编码",
+          "type": "varchar",
+          "length": "30.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "编码"
+        },
+        {
+          "name": "fmodifytime",
+          "description": "修改时间",
+          "type": "timestamp",
+          "length": "",
+          "scale": "",
+          "nullable_marker": "否",
+          "default": "",
+          "primary_key": false,
+          "remarks": "修改时间"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_zywarehouse_l",
+      "business_name": "直营公司仓库",
+      "description": "直营公司仓库-多语言表",
+      "parent": "tk_jml_zywarehouse",
+      "references": [
+        {
+          "business_name": "直营公司仓库",
+          "description": "直营公司仓库-多语言表",
+          "parent": "tk_jml_zywarehouse"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "length": "64.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "0",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "length": "50.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "flocaleid",
+          "description": "flocaleid",
+          "type": "varchar",
+          "length": "10.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
+          "primary_key": false,
+          "remarks": "localeid"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "varchar",
+          "length": "36.0",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
+          "primary_key": true,
+          "remarks": "pkid"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "source_table": "tk_jml_weighperiod",
+      "source_column": "forgid",
+      "target_table": "t_bd_acctbanks_view_org",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "org"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_weighperiod",
+      "source_column": "forgid",
+      "target_table": "t_bd_centralpurchase_org",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "org"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_weighperiod",
+      "source_column": "forgid",
+      "target_table": "t_ctsy_ctrl_sync_org",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "org"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_weighperiod",
+      "source_column": "forgid",
+      "target_table": "t_int_workingplan_org",
+      "target_column": "fpkid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "org"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_weighperiod",
+      "source_column": "forgid",
+      "target_table": "t_org_org",
+      "target_column": "fid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "org"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_weighperiod",
+      "source_column": "forgid",
+      "target_table": "t_perm_privacystmt_org",
+      "target_column": "fpkid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "org"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_weighperiod",
+      "source_column": "forgid",
+      "target_table": "t_yzj_org",
+      "target_column": "fid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "org"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_weighperiod",
+      "source_column": "forgid",
+      "target_table": "tk_jml_supplier_req_org",
+      "target_column": "fpkid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "org"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_weighperiod_l",
+      "source_column": "fid",
+      "target_table": "tk_jml_weighperiod",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_weighperiod_u",
+      "source_column": "fdataid",
+      "target_table": "t_ctsy_ctrl_sync_data",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "data"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_weighperiod_u",
+      "source_column": "fdataid",
+      "target_table": "tk_jml_weighperiod",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_weighperiod_u",
+      "source_column": "fuseorgid",
+      "target_table": "t_bd_autoassign_useorg",
+      "target_column": "fpkid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "useorg"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_weighperiod_u",
+      "source_column": "fuseorgid",
+      "target_table": "tk_jml_useorg",
+      "target_column": "fpkid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "useorg"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ysentryentity",
+      "source_column": "fentryid",
+      "target_table": "t_bastax_taxgroup_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ysentryentity",
+      "source_column": "fentryid",
+      "target_table": "t_bd_defstrategy_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ysentryentity",
+      "source_column": "fentryid",
+      "target_table": "t_bd_minimumtax_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ysentryentity",
+      "source_column": "fentryid",
+      "target_table": "t_bd_taxrate_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ysentryentity",
+      "source_column": "fentryid",
+      "target_table": "t_cts_addr_import_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ysentryentity",
+      "source_column": "fentryid",
+      "target_table": "t_cts_curr_config_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ysentryentity",
+      "source_column": "fentryid",
+      "target_table": "t_int_exratesync_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ysentryentity",
+      "source_column": "fentryid",
+      "target_table": "t_int_precision_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ysentryentity",
+      "source_column": "fentryid",
+      "target_table": "t_int_servicetest_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ysentryentity",
+      "source_column": "fentryid",
+      "target_table": "t_int_taxidcheck_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ysentryentity",
+      "source_column": "fentryid",
+      "target_table": "t_mpdm_cardimpexp_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ysentryentity",
+      "source_column": "fentryid",
+      "target_table": "t_mpdm_cardskills_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ysentryentity",
+      "source_column": "fentryid",
+      "target_table": "t_perm_datarule_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ysentryentity",
+      "source_column": "fentryid",
+      "target_table": "t_perm_datarules_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ysentryentity",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_change_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ysentryentity",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_deliveryp_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ysentryentity",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_material_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ysentryentity",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_user_mid_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ysentryentity",
+      "source_column": "fid",
+      "target_table": "t_bd_material",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_zywarehouse_l",
+      "source_column": "fid",
+      "target_table": "tk_jml_zywarehouse",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    }
+  ],
+  "metadata_conflicts": []
+}

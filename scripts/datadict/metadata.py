@@ -12,6 +12,9 @@ def read_excel(path):
     try:
         if "表目录" not in wb.sheetnames:
             raise ValueError("Missing 表目录 worksheet")
+        for sheet in wb:
+            if sheet.max_row == 1 and sheet.max_column == 1:
+                sheet.reset_dimensions()
         bo = ""
         for row in wb["表目录"].iter_rows(min_row=7, max_col=11, values_only=True):
             bo = text(row[4]) or bo
