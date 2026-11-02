@@ -46,7 +46,8 @@ def read_excel(path):
                     if not name:
                         continue
                     column = dict(name=name, description=text(row[3]),
-                        type=text(row[4]).lower(), primary_key=text(row[7]).lower() in
+                        type=text(row[4]).lower(), length=text(row[5]), scale=text(row[6]),
+                        nullable_marker=text(row[8]), default=text(row[9]), primary_key=text(row[7]).lower() in
                         {"是", "√", "true", "1", "yes", "y", "pk"}, remarks=text(row[10]))
                     existing = next ( (c for c in current["columns"] if c["name"] == name), None)
                     if existing is None:

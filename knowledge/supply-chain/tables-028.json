@@ -33,6 +33,10 @@
           "name": "fbasedataid",
           "description": "fbasedataid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": false,
           "remarks": "费用项目 er_expenseitemedit"
         },
@@ -40,6 +44,10 @@
           "name": "fpkid",
           "description": "fpkid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": true,
           "remarks": "pkid"
         },
@@ -47,6 +55,10 @@
           "name": "fentryid",
           "description": "fentryid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": false,
           "remarks": ""
         }
@@ -84,6 +96,10 @@
           "name": "fbasedataid",
           "description": "fbasedataid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": false,
           "remarks": "费用项目 er_expenseitemedit"
         },
@@ -91,6 +107,10 @@
           "name": "fpkid",
           "description": "fpkid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": true,
           "remarks": "pkid"
         },
@@ -98,6 +118,10 @@
           "name": "fentryid",
           "description": "fentryid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": false,
           "remarks": ""
         }
@@ -135,6 +159,10 @@
           "name": "fbasedataid",
           "description": "fbasedataid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": false,
           "remarks": "费用项目 er_expenseitemedit"
         },
@@ -142,6 +170,10 @@
           "name": "fpkid",
           "description": "fpkid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": true,
           "remarks": "pkid"
         },
@@ -149,6 +181,10 @@
           "name": "fentryid",
           "description": "fentryid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": false,
           "remarks": ""
         }
@@ -186,6 +222,10 @@
           "name": "fbasedataid",
           "description": "fbasedataid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": false,
           "remarks": "费用项目 er_expenseitemedit"
         },
@@ -193,6 +233,10 @@
           "name": "fpkid",
           "description": "fpkid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": true,
           "remarks": "pkid"
         },
@@ -200,6 +244,10 @@
           "name": "fentryid",
           "description": "fentryid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": false,
           "remarks": ""
         }
@@ -237,6 +285,10 @@
           "name": "fbasedataid",
           "description": "fbasedataid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": false,
           "remarks": "费用项目 er_expenseitemedit"
         },
@@ -244,6 +296,10 @@
           "name": "fpkid",
           "description": "fpkid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": true,
           "remarks": "pkid"
         },
@@ -251,6 +307,10 @@
           "name": "fentryid",
           "description": "fentryid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": false,
           "remarks": ""
         }
@@ -288,6 +348,10 @@
           "name": "fbasedataid",
           "description": "fbasedataid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": false,
           "remarks": "费用项目 er_expenseitemedit"
         },
@@ -295,6 +359,10 @@
           "name": "fpkid",
           "description": "fpkid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": true,
           "remarks": "pkid"
         },
@@ -302,6 +370,10 @@
           "name": "fentryid",
           "description": "fentryid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": false,
           "remarks": ""
         }
@@ -339,6 +411,10 @@
           "name": "fbasedataid",
           "description": "fbasedataid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": false,
           "remarks": "费用项目 er_expenseitemedit"
         },
@@ -346,6 +422,10 @@
           "name": "fpkid",
           "description": "fpkid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": true,
           "remarks": "pkid"
         },
@@ -353,6 +433,10 @@
           "name": "fentryid",
           "description": "fentryid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": false,
           "remarks": ""
         }
@@ -375,6 +459,10 @@
           "name": "fid",
           "description": "fid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": false,
           "remarks": ""
         },
@@ -382,6 +470,10 @@
           "name": "fk_jml_yaoqiu",
           "description": "要求及参数",
           "type": "varchar",
+          "length": "50",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
           "primary_key": false,
           "remarks": "要求及参数"
         },
@@ -389,6 +481,10 @@
           "name": "fk_jml_pp",
           "description": "品牌及规格",
           "type": "varchar",
+          "length": "50",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
           "primary_key": false,
           "remarks": "品牌及规格"
         },
@@ -396,6 +492,10 @@
           "name": "fseq",
           "description": "分录行号",
           "type": "int4",
+          "length": "32",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "0",
           "primary_key": false,
           "remarks": "分录行号"
         },
@@ -403,6 +503,10 @@
           "name": "fk_jml_hxbj",
           "description": "设备核心部件",
           "type": "varchar",
+          "length": "50",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
           "primary_key": false,
           "remarks": "设备核心部件"
         },
@@ -410,6 +514,10 @@
           "name": "fk_jml_caizhixf",
           "description": "材质是否相符",
           "type": "varchar",
+          "length": "50",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
           "primary_key": false,
           "remarks": "材质是否相符,枚举: 1 :是  0 :否"
         },
@@ -417,6 +525,10 @@
           "name": "fk_jml_yanshoujiel",
           "description": "验收结论",
           "type": "varchar",
+          "length": "50",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
           "primary_key": false,
           "remarks": "验收结论,枚举: 1 :合格  0 :不合格"
         },
@@ -424,6 +536,10 @@
           "name": "fk_jml_yanshoubz",
           "description": "备注",
           "type": "varchar",
+          "length": "50",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
           "primary_key": false,
           "remarks": "备注"
         },
@@ -431,6 +547,10 @@
           "name": "fentryid",
           "description": "fentryid",
           "type": "int8",
+          "length": "64",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "",
           "primary_key": true,
           "remarks": "id"
         },
@@ -438,6 +558,10 @@
           "name": "fk_jml_yanshousl",
           "description": "数量",
           "type": "varchar",
+          "length": "50",
+          "scale": "",
+          "nullable_marker": "是",
+          "default": "' '",
           "primary_key": false,
           "remarks": "数量"
         }
