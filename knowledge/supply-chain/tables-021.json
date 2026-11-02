@@ -7441,7 +7441,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -7456,7 +7456,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -7471,7 +7471,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -7651,7 +7651,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -7816,7 +7816,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -8041,7 +8041,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -8086,7 +8086,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -8101,7 +8101,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -8266,7 +8266,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -8431,7 +8431,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -8596,7 +8596,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -8761,7 +8761,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -8776,7 +8776,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -8791,7 +8791,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -8971,7 +8971,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -8986,7 +8986,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -9151,7 +9151,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -9181,7 +9181,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -9196,7 +9196,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -9361,7 +9361,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -9526,7 +9526,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -9541,7 +9541,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -9706,7 +9706,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -9871,7 +9871,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -9931,7 +9931,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -9976,7 +9976,37 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_sctm_scpo_lk",
+      "source_column": "fid",
+      "target_table": "t_sctm_scpo",
+      "target_column": "fid",
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "source": "name_suffix",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_sctm_scpo_tc",
+      "source_column": "fid",
+      "target_table": "t_sctm_scpo",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -10133,6 +10163,21 @@
       "status": "candidate"
     },
     {
+      "source_table": "t_sctm_scpo_wb",
+      "source_column": "fid",
+      "target_table": "t_sctm_scpo",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
       "source_table": "t_sctm_scpoentry",
       "source_column": "fentryid",
       "target_table": "t_ccm_scheme_entry",
@@ -10277,6 +10322,21 @@
         {
           "source": "naming",
           "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_sctm_scpoentry",
+      "source_column": "fid",
+      "target_table": "t_sctm_scpo",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -10600,6 +10660,21 @@
     {
       "source_table": "t_sctm_scpoentry_lk",
       "source_column": "fentryid",
+      "target_table": "t_sctm_scpoentry",
+      "target_column": "fentryid",
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "source": "name_suffix",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_sctm_scpoentry_lk",
+      "source_column": "fentryid",
       "target_table": "tk_jml_ta_entry",
       "target_column": "fentryid",
       "confidence": 0.65,
@@ -10771,7 +10846,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -10907,6 +10982,21 @@
         {
           "source": "naming",
           "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_sctm_scpoentry_pay_lk",
+      "source_column": "fentryid",
+      "target_table": "t_sctm_scpoentry_pay",
+      "target_column": "fentryid",
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "source": "name_suffix",
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -11065,28 +11155,28 @@
     {
       "source_table": "t_sctm_scpoentry_r",
       "source_column": "fentryid",
-      "target_table": "tk_jml_ta_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_sctm_scpoentry_r",
-      "source_column": "fid",
       "target_table": "t_sctm_scpoentry",
-      "target_column": "fid",
+      "target_column": "fentryid",
       "confidence": 0.8,
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_sctm_scpoentry_r",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_ta_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
         }
       ],
       "cardinality": "unknown",

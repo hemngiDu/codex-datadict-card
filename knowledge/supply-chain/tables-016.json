@@ -8288,6 +8288,21 @@
     },
     {
       "source_table": "t_msbd_calstrategy_fa",
+      "source_column": "fid",
+      "target_table": "t_msbd_calstrategy",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_msbd_calstrategy_fa",
       "source_column": "fquoteschemegroupid",
       "target_table": "t_msbd_quoteschemegroup",
       "target_column": "fid",
@@ -8452,6 +8467,36 @@
       "status": "candidate"
     },
     {
+      "source_table": "t_msbd_calstrategy_fo",
+      "source_column": "fid",
+      "target_table": "t_msbd_calstrategy",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_msbd_calstrategy_l",
+      "source_column": "fid",
+      "target_table": "t_msbd_calstrategy",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
       "source_table": "t_msbd_pricecontrolsty",
       "source_column": "forgid",
       "target_table": "t_im_invcountsche_org",
@@ -8476,6 +8521,21 @@
         {
           "source": "naming",
           "detail": "org"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_msbd_pricecontrolsty_l",
+      "source_column": "fid",
+      "target_table": "t_msbd_pricecontrolsty",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -8512,6 +8572,21 @@
       "status": "candidate"
     },
     {
+      "source_table": "t_msbd_pricecontrolsty_u",
+      "source_column": "fdataid",
+      "target_table": "t_msbd_pricecontrolsty",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
       "source_table": "t_msbd_pricectlcentry",
       "source_column": "fentryid",
       "target_table": "t_ccm_scheme_entry",
@@ -8662,6 +8737,21 @@
       "status": "candidate"
     },
     {
+      "source_table": "t_msbd_pricectlcentry",
+      "source_column": "fid",
+      "target_table": "t_msbd_pricectlscheme",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
       "source_table": "t_msbd_pricectlentry",
       "source_column": "fentryid",
       "target_table": "t_ccm_scheme_entry",
@@ -8812,6 +8902,21 @@
       "status": "candidate"
     },
     {
+      "source_table": "t_msbd_pricectlentry",
+      "source_column": "fid",
+      "target_table": "t_msbd_pricectlscheme",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
       "source_table": "t_msbd_pricectlmentry",
       "source_column": "fentryid",
       "target_table": "t_ccm_scheme_entry",
@@ -8956,6 +9061,21 @@
         {
           "source": "naming",
           "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_msbd_pricectlmentry",
+      "source_column": "fid",
+      "target_table": "t_msbd_pricectlscheme",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -8992,6 +9112,21 @@
       "status": "candidate"
     },
     {
+      "source_table": "t_msbd_pricectlscheme_l",
+      "source_column": "fid",
+      "target_table": "t_msbd_pricectlscheme",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
       "source_table": "t_msbd_pricectlsentry",
       "source_column": "fentryid",
       "target_table": "t_ccm_scheme_entry",
@@ -9142,6 +9277,21 @@
       "status": "candidate"
     },
     {
+      "source_table": "t_msbd_pricectlsentry",
+      "source_column": "fid",
+      "target_table": "t_msbd_pricectlscheme",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
       "source_table": "t_msbd_pricectlstyentry",
       "source_column": "fentryid",
       "target_table": "t_ccm_scheme_entry",
@@ -9292,6 +9442,36 @@
       "status": "candidate"
     },
     {
+      "source_table": "t_msbd_pricectlstyentry",
+      "source_column": "fid",
+      "target_table": "t_msbd_pricecontrolsty",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_msbd_pricedimension_l",
+      "source_column": "fid",
+      "target_table": "t_msbd_pricedimension",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
       "source_table": "t_msbd_pricedimmementry",
       "source_column": "fentryid",
       "target_table": "t_ccm_scheme_entry",
@@ -9442,6 +9622,21 @@
       "status": "candidate"
     },
     {
+      "source_table": "t_msbd_pricedimmementry",
+      "source_column": "fid",
+      "target_table": "t_msbd_pricedimension",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
       "source_table": "t_msbd_quoteschemegroup_e",
       "source_column": "fentryid",
       "target_table": "t_ccm_scheme_entry",
@@ -9586,6 +9781,21 @@
         {
           "source": "naming",
           "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_msbd_quoteschemegroup_e",
+      "source_column": "fid",
+      "target_table": "t_msbd_quoteschemegroup",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -9601,6 +9811,21 @@
         {
           "source": "naming",
           "detail": "quotescheme"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_msbd_quoteschemegroup_l",
+      "source_column": "fid",
+      "target_table": "t_msbd_quoteschemegroup",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -9916,21 +10141,6 @@
         {
           "source": "naming",
           "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_om_mftorderentry_e",
-      "source_column": "fid",
-      "target_table": "t_om_mftorderentry",
-      "target_column": "fid",
-      "confidence": 0.8,
-      "evidence": [
-        {
-          "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -10342,6 +10552,21 @@
       "status": "candidate"
     },
     {
+      "source_table": "t_plat_calentry",
+      "source_column": "fid",
+      "target_table": "t_plat_quotestrategy",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
       "source_table": "t_plat_dymacc_l",
       "source_column": "fid",
       "target_table": "t_plat_dymacc",
@@ -10350,7 +10575,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -10515,7 +10740,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -10680,7 +10905,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -10845,7 +11070,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -10860,7 +11085,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -11011,6 +11236,21 @@
         {
           "source": "naming",
           "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_plat_quoteconentry",
+      "source_column": "fid",
+      "target_table": "t_plat_quotestrategy",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -11062,6 +11302,21 @@
       "status": "candidate"
     },
     {
+      "source_table": "t_plat_quotescheme_l",
+      "source_column": "fid",
+      "target_table": "t_plat_quotescheme",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
       "source_table": "t_plat_quoteschemeentry",
       "source_column": "fentryid",
       "target_table": "t_ccm_scheme_entry",
@@ -11212,6 +11467,21 @@
       "status": "candidate"
     },
     {
+      "source_table": "t_plat_quoteschemeentry",
+      "source_column": "fid",
+      "target_table": "t_plat_quotescheme",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
       "source_table": "t_plat_quoteschemeentry_r",
       "source_column": "fentryid",
       "target_table": "t_ccm_scheme_entry",
@@ -11362,6 +11632,21 @@
       "status": "candidate"
     },
     {
+      "source_table": "t_plat_quoteschemeentry_r",
+      "source_column": "fid",
+      "target_table": "t_plat_quotescheme",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
       "source_table": "t_plat_quotesortentry",
       "source_column": "fentryid",
       "target_table": "t_ccm_scheme_entry",
@@ -11512,6 +11797,21 @@
       "status": "candidate"
     },
     {
+      "source_table": "t_plat_quotesortentry",
+      "source_column": "fid",
+      "target_table": "t_plat_quotescheme",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
       "source_table": "t_plat_quotestentry",
       "source_column": "fentryid",
       "target_table": "t_ccm_scheme_entry",
@@ -11656,6 +11956,21 @@
         {
           "source": "naming",
           "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_plat_quotestentry",
+      "source_column": "fid",
+      "target_table": "t_plat_quotestrategy",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -11707,6 +12022,21 @@
       "status": "candidate"
     },
     {
+      "source_table": "t_plat_quotestrategy_l",
+      "source_column": "fid",
+      "target_table": "t_plat_quotestrategy",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
       "source_table": "t_plat_quotestrategy_m",
       "source_column": "forgid",
       "target_table": "t_im_invcountsche_org",
@@ -11731,6 +12061,21 @@
         {
           "source": "naming",
           "detail": "org"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_plat_quotestrategy_u",
+      "source_column": "fdataid",
+      "target_table": "t_plat_quotestrategy",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -11895,7 +12240,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -11940,7 +12285,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",

@@ -37,3 +37,7 @@ description: 当用户提供金蝶云苍穹导出的 Excel 数据字典并用自
 独立的 `generate_sql.py`、`generate_card.py`、`generate_search_graph.py` 仍可运行；后者保留在 Excel 同目录输出 graph.html/index.json/chunks/columns 的行为。
 
 图谱需要 D3 CDN 和本地 HTTP 服务：在图谱目录运行 `python -m http.server 8080`。旧图谱/ER 含历史库存业务规则，仅作浏览辅助；辅助 SQL 时优先使用带证据的语义模型。注释 SQL 仅生成文件，执行数据库写入需有用户授权。
+
+## 已有供应链知识库与建表
+
+用户只说业务对象名称时，先在 `knowledge/supply-chain/index.json` 精确匹配 references.business_name；读取对应分块，列出全部物理表和字段注释，并展示候选关联、字段与证据。相似业务对象单独提示。用户要求 PostgreSQL 建表时运行 `python scripts/business_ddl.py knowledge/supply-chain <业务对象名称> --output <输出.sql>`，解释冲突、缺失或不支持类型并停止生成，不猜测。所有推断均为候选，不自动创建外键或执行 SQL。

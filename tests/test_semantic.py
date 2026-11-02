@@ -38,6 +38,17 @@ class SemanticTests(unittest.TestCase):
         self.assertTrue(all(e["evidence"] and 0 <= e["confidence"] <= 1 for e in edges))
         self.assertEqual(infer(self.model, {"min_confidence": .99}), [])
 
+    def test_parent_uses_single_primary_key_not_nonunique_fid(self):
+        parent = next(t for t in self.model['tables'] if t['name'].endswith('entry'))
+        parent['columns'].append(dict(name='fid', type='bigint', primary_key=False))
+        child = dict(name=parent['name']+'_r', parent=parent['name'], columns=[
+            dict(name='fid', type='bigint', primary_key=False),
+            dict(name='fentryid', type='bigint', primary_key=True)])
+        self.model['tables'].append(child)
+        matches=[r for r in infer(self.model) if r['source_table']==child['name']]
+        self.assertTrue(any(r['source_column']=='fentryid' and r['target_column']=='fentryid' for r in matches))
+        self.assertFalse(any(r['source_column']=='fid' and r['target_column']=='fid' for r in matches))
+
     def test_missing_columns_types_and_composite_key(self):
         supplier = self.model["tables"][2]
         supplier["columns"][0]["type"] = "varchar"

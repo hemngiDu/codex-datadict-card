@@ -13535,7 +13535,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -13580,7 +13580,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -13591,11 +13591,11 @@
       "source_column": "fid",
       "target_table": "t_im_mdc_mftreturnbill",
       "target_column": "fid",
-      "confidence": 0.8,
+      "confidence": 0.7,
       "evidence": [
         {
-          "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "source": "name_suffix",
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -13610,7 +13610,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -13775,7 +13775,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -13926,6 +13926,21 @@
         {
           "source": "naming",
           "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_mqbentry",
+      "source_column": "fid",
+      "target_table": "t_im_mdc_mreqoutbill",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -14166,6 +14181,21 @@
         {
           "source": "naming",
           "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_mqbentry_r",
+      "source_column": "fentryid",
+      "target_table": "t_im_mdc_mqbentry",
+      "target_column": "fentryid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -14510,7 +14540,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -14547,6 +14577,36 @@
       "status": "candidate"
     },
     {
+      "source_table": "t_im_mdc_mreqoutbill_l",
+      "source_column": "fid",
+      "target_table": "t_im_mdc_mreqoutbill",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_mreqoutbill_m",
+      "source_column": "fid",
+      "target_table": "t_im_mdc_mreqoutbill",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
       "source_table": "t_im_mdc_omcmplentry_lk",
       "source_column": "fentryid",
       "target_table": "t_ccm_scheme_entry",
@@ -14571,6 +14631,21 @@
         {
           "source": "naming",
           "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_omcmplentry_lk",
+      "source_column": "fentryid",
+      "target_table": "t_im_mdc_omcpbillentry",
+      "target_column": "fentryid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -14735,7 +14810,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -14746,11 +14821,11 @@
       "source_column": "fid",
       "target_table": "t_im_mdc_omcmplinbill",
       "target_column": "fid",
-      "confidence": 0.8,
+      "confidence": 0.7,
       "evidence": [
         {
-          "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "source": "name_suffix",
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -14765,7 +14840,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -14930,7 +15005,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -15095,7 +15170,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -15492,21 +15567,6 @@
       "status": "candidate"
     },
     {
-      "source_table": "t_im_mdc_omcpbillentry_m",
-      "source_column": "fid",
-      "target_table": "t_im_mdc_omcpbillentry",
-      "target_column": "fid",
-      "confidence": 0.8,
-      "evidence": [
-        {
-          "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
       "source_table": "t_im_mdc_omcpbillentry_r",
       "source_column": "fentryid",
       "target_table": "t_ccm_scheme_entry",
@@ -15531,6 +15591,21 @@
         {
           "source": "naming",
           "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_omcpbillentry_r",
+      "source_column": "fentryid",
+      "target_table": "t_im_mdc_omcpbillentry",
+      "target_column": "fentryid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -15651,21 +15726,6 @@
         {
           "source": "naming",
           "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_omcpbillentry_r",
-      "source_column": "fid",
-      "target_table": "t_im_mdc_omcpbillentry",
-      "target_column": "fid",
-      "confidence": 0.8,
-      "evidence": [
-        {
-          "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -15710,7 +15770,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -15721,11 +15781,11 @@
       "source_column": "fid",
       "target_table": "t_im_mdc_ominbill",
       "target_column": "fid",
-      "confidence": 0.8,
+      "confidence": 0.7,
       "evidence": [
         {
-          "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "source": "name_suffix",
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -15740,7 +15800,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -15905,7 +15965,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -16070,7 +16130,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -16287,345 +16347,360 @@
       "status": "candidate"
     },
     {
-      "source_table": "t_im_mdc_ominbillentry_f",
-      "source_column": "fid",
+      "source_table": "t_im_mdc_ominbillentry_l",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_scheme_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_l",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_temp_archive_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_l",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchconfig_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_l",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchdetail_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_l",
+      "source_column": "fentryid",
+      "target_table": "t_invp_plan_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_l",
+      "source_column": "fentryid",
+      "target_table": "t_iscc_autopush_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_l",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_f_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_l",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_m_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_l",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_r_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_l",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_ta_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_lk",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_scheme_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_lk",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_temp_archive_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_lk",
+      "source_column": "fentryid",
       "target_table": "t_im_mdc_ominbillentry",
-      "target_column": "fid",
+      "target_column": "fentryid",
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "source": "name_suffix",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_lk",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchconfig_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_lk",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchdetail_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_lk",
+      "source_column": "fentryid",
+      "target_table": "t_invp_plan_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_lk",
+      "source_column": "fentryid",
+      "target_table": "t_iscc_autopush_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_lk",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_f_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_lk",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_m_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_lk",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_r_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_lk",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_ta_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_r",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_scheme_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_r",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_temp_archive_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_ominbillentry_r",
+      "source_column": "fentryid",
+      "target_table": "t_im_mdc_ominbillentry",
+      "target_column": "fentryid",
       "confidence": 0.8,
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_l",
-      "source_column": "fentryid",
-      "target_table": "t_ccm_scheme_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_l",
-      "source_column": "fentryid",
-      "target_table": "t_ccm_temp_archive_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_l",
-      "source_column": "fentryid",
-      "target_table": "t_invp_matchconfig_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_l",
-      "source_column": "fentryid",
-      "target_table": "t_invp_matchdetail_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_l",
-      "source_column": "fentryid",
-      "target_table": "t_invp_plan_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_l",
-      "source_column": "fentryid",
-      "target_table": "t_iscc_autopush_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_l",
-      "source_column": "fentryid",
-      "target_table": "t_mobsm_f_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_l",
-      "source_column": "fentryid",
-      "target_table": "t_mobsm_m_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_l",
-      "source_column": "fentryid",
-      "target_table": "t_mobsm_r_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_l",
-      "source_column": "fentryid",
-      "target_table": "tk_jml_ta_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_lk",
-      "source_column": "fentryid",
-      "target_table": "t_ccm_scheme_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_lk",
-      "source_column": "fentryid",
-      "target_table": "t_ccm_temp_archive_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_lk",
-      "source_column": "fentryid",
-      "target_table": "t_invp_matchconfig_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_lk",
-      "source_column": "fentryid",
-      "target_table": "t_invp_matchdetail_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_lk",
-      "source_column": "fentryid",
-      "target_table": "t_invp_plan_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_lk",
-      "source_column": "fentryid",
-      "target_table": "t_iscc_autopush_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_lk",
-      "source_column": "fentryid",
-      "target_table": "t_mobsm_f_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_lk",
-      "source_column": "fentryid",
-      "target_table": "t_mobsm_m_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_lk",
-      "source_column": "fentryid",
-      "target_table": "t_mobsm_r_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_lk",
-      "source_column": "fentryid",
-      "target_table": "tk_jml_ta_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_r",
-      "source_column": "fentryid",
-      "target_table": "t_ccm_scheme_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_r",
-      "source_column": "fentryid",
-      "target_table": "t_ccm_temp_archive_entry",
-      "target_column": "fentryid",
-      "confidence": 0.65,
-      "evidence": [
-        {
-          "source": "naming",
-          "detail": "entry"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -16746,21 +16821,6 @@
         {
           "source": "naming",
           "detail": "entry"
-        }
-      ],
-      "cardinality": "unknown",
-      "status": "candidate"
-    },
-    {
-      "source_table": "t_im_mdc_ominbillentry_r",
-      "source_column": "fid",
-      "target_table": "t_im_mdc_ominbillentry",
-      "target_column": "fid",
-      "confidence": 0.8,
-      "evidence": [
-        {
-          "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -16925,7 +16985,7 @@
       "evidence": [
         {
           "source": "kingdee_catalog",
-          "detail": "catalog parent + conventional column; verify with model"
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -17007,6 +17067,66 @@
       "status": "candidate"
     },
     {
+      "source_table": "t_im_mdc_omoutbill_l",
+      "source_column": "fid",
+      "target_table": "t_im_mdc_omoutbill",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_omoutbill_lk",
+      "source_column": "fid",
+      "target_table": "t_im_mdc_omoutbill",
+      "target_column": "fid",
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "source": "name_suffix",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_omoutbill_m",
+      "source_column": "fid",
+      "target_table": "t_im_mdc_omoutbill",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_omoutbill_tc",
+      "source_column": "fid",
+      "target_table": "t_im_mdc_omoutbill",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
       "source_table": "t_im_mdc_omoutbill_wb",
       "source_column": "fentryid",
       "target_table": "t_ccm_scheme_entry",
@@ -17157,6 +17277,21 @@
       "status": "candidate"
     },
     {
+      "source_table": "t_im_mdc_omoutbill_wb",
+      "source_column": "fid",
+      "target_table": "t_im_mdc_omoutbill",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
       "source_table": "t_im_mdc_omoutbillentry",
       "source_column": "fentryid",
       "target_table": "t_ccm_scheme_entry",
@@ -17301,6 +17436,21 @@
         {
           "source": "naming",
           "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_omoutbillentry",
+      "source_column": "fid",
+      "target_table": "t_im_mdc_omoutbill",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -17399,6 +17549,21 @@
     {
       "source_table": "t_im_mdc_omoutbillentry_lk",
       "source_column": "fentryid",
+      "target_table": "t_im_mdc_omoutbillentry",
+      "target_column": "fentryid",
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "source": "name_suffix",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_omoutbillentry_lk",
+      "source_column": "fentryid",
       "target_table": "t_invp_matchconfig_entry",
       "target_column": "fentryid",
       "confidence": 0.65,
@@ -17699,6 +17864,21 @@
     {
       "source_table": "t_im_mdc_omoutbillentry_r",
       "source_column": "fentryid",
+      "target_table": "t_im_mdc_omoutbillentry",
+      "target_column": "fentryid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_omoutbillentry_r",
+      "source_column": "fentryid",
       "target_table": "t_invp_matchconfig_entry",
       "target_column": "fentryid",
       "confidence": 0.65,
@@ -17961,6 +18141,21 @@
         {
           "source": "naming",
           "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_prblentry",
+      "source_column": "fid",
+      "target_table": "t_im_mdc_productinbill",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
@@ -18224,6 +18419,21 @@
     {
       "source_table": "t_im_mdc_prblentry_r",
       "source_column": "fentryid",
+      "target_table": "t_im_mdc_prblentry",
+      "target_column": "fentryid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_prblentry_r",
+      "source_column": "fentryid",
       "target_table": "t_invp_matchconfig_entry",
       "target_column": "fentryid",
       "confidence": 0.65,
@@ -18366,6 +18576,96 @@
         {
           "source": "naming",
           "detail": "manftechentry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_probill_lk",
+      "source_column": "fid",
+      "target_table": "t_im_mdc_mreqoutbill",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_probill_tc",
+      "source_column": "fid",
+      "target_table": "t_im_mdc_mreqoutbill",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_probill_wb",
+      "source_column": "fid",
+      "target_table": "t_im_mdc_mreqoutbill",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_mdc_probillentry_lk",
+      "source_column": "fentryid",
+      "target_table": "t_im_mdc_mqbentry",
+      "target_column": "fentryid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_im_productinbillentry_lk",
+      "source_column": "fentryid",
+      "target_table": "t_im_mdc_prblentry",
+      "target_column": "fentryid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_matreqbillentity",
+      "source_column": "fid",
+      "target_table": "t_im_mdc_omoutbill",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "parent table and matching single primary key; verify with model"
         }
       ],
       "cardinality": "unknown",
