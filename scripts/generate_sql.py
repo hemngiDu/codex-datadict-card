@@ -7,18 +7,22 @@ wb = openpyxl.load_workbook(fp)
 output = []
 base = os.path.splitext(os.path.basename(fp))[0]
 outdir = os.path.dirname(os.path.abspath(fp))
+def quote_identifier(value):
+    """Quote each component of a possibly schema-qualified PostgreSQL name."""
+    return '.'.join('"' + part.replace('"', '""') + '"' for part in value.split('.'))
+
 def flush(tbl, desc, cols):
     """Return (table_comment_lines, column_comment_lines) for one table"""
     lines = []
     if tbl:
         d = desc.replace("'", "''") if desc else ""
-        lines.append("comment on table {} is '{}';".format(tbl, d))
+        lines.append("comment on table {} is '{}';".format(quote_identifier(tbl), d))
         for cn, ct, cr in cols:
             c = ct
             if c == cn and cr and cr.strip():
                 c = cr.strip()
             c = c.replace("'", "''")
-            lines.append("comment on column {}.{} is '{}';".format(tbl, cn, c))
+            lines.append("comment on column {}.{} is '{}';".format(quote_identifier(tbl), quote_identifier(cn), c))
         lines.append("")
     return lines
 

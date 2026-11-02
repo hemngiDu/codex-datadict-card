@@ -88,7 +88,7 @@ class SemanticTests(unittest.TestCase):
         run = subprocess.run([sys.executable, str(ROOT / "scripts/generate_all.py"), str(self.path)], capture_output=True, text=True)
         self.assertEqual(run.returncode, 0, run.stderr)
         base = self.path.parent
-        self.assertIn("comment on column t_pm_purorder.fsupplierid", (base / "sample_comments.sql").read_text(encoding="utf-8"))
+        self.assertIn('comment on column "t_pm_purorder"."fsupplierid"', (base / "sample_comments.sql").read_text(encoding="utf-8"))
         self.assertIn("erDiagram", (base / "sample_datadict_card.md").read_text(encoding="utf-8"))
         self.assertTrue((base / "sample_graph/graph.html").exists())
         self.assertEqual(len(json.loads((base / "sample_graph/index.json").read_text(encoding="utf-8"))), 3)
