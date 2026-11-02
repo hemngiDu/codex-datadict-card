@@ -1,0 +1,5729 @@
+{
+  "source": "供应链云.xlsx",
+  "tables": [
+    {
+      "name": "t_upm_masterservice",
+      "business_name": "动作微服务注册",
+      "description": "动作微服务注册-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "动作微服务注册",
+          "description": "动作微服务注册-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "fmodifierid",
+          "description": "修改人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fbizapp",
+          "description": "业务应用",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "业务应用实体 bos_devportal_bizapp"
+        },
+        {
+          "name": "fcreatetime",
+          "description": "创建时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "创建时间"
+        },
+        {
+          "name": "fispreset",
+          "description": "系统预设",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "系统预设"
+        },
+        {
+          "name": "fmodifytime",
+          "description": "修改时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "修改时间"
+        },
+        {
+          "name": "fstatus",
+          "description": "数据状态",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "数据状态,枚举: A :暂存  B :已提交  C :已审核"
+        },
+        {
+          "name": "fbizcloud",
+          "description": "业务云",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "业务云 bos_devportal_bizcloud"
+        },
+        {
+          "name": "fmasterid",
+          "description": "主数据内码",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "主数据内码"
+        },
+        {
+          "name": "fcreatorid",
+          "description": "创建人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fservicemethod",
+          "description": "服务方法",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "服务方法"
+        },
+        {
+          "name": "fservicename",
+          "description": "服务名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "服务名称"
+        },
+        {
+          "name": "fenable",
+          "description": "使用状态",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "使用状态,枚举: 0 :禁用  1 :可用"
+        },
+        {
+          "name": "fiscus",
+          "description": "客开微服务",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "客开微服务"
+        },
+        {
+          "name": "fnumber",
+          "description": "编码",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "编码"
+        },
+        {
+          "name": "fdesc",
+          "description": "描述",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "描述"
+        },
+        {
+          "name": "ffactorypre",
+          "description": "服务工厂类前缀",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "服务工厂类前缀"
+        }
+      ]
+    },
+    {
+      "name": "t_upm_masterservice_l",
+      "business_name": "动作微服务注册",
+      "description": "动作微服务注册-多语言表",
+      "parent": "t_upm_masterservice",
+      "references": [
+        {
+          "business_name": "动作微服务注册",
+          "description": "动作微服务注册-多语言表",
+          "parent": "t_upm_masterservice"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "flocaleid",
+          "description": "flocaleid",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "localeid"
+        },
+        {
+          "name": "fdesc",
+          "description": "描述",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "描述"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "varchar",
+          "primary_key": true,
+          "remarks": "pkid"
+        }
+      ]
+    },
+    {
+      "name": "t_upm_masterstatus",
+      "business_name": "单件状态",
+      "description": "单件状态-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "单件状态",
+          "description": "单件状态-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "fstatus",
+          "description": "数据状态",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "数据状态,枚举: A :暂存  B :已提交  C :已审核"
+        },
+        {
+          "name": "fmodifierid",
+          "description": "修改人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fmasterid",
+          "description": "主数据内码",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "主数据内码"
+        },
+        {
+          "name": "fcreatorid",
+          "description": "创建人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fcreatetime",
+          "description": "创建时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "创建时间"
+        },
+        {
+          "name": "fenable",
+          "description": "使用状态",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "使用状态,枚举: 0 :禁用  1 :可用"
+        },
+        {
+          "name": "fnumber",
+          "description": "编码",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "编码"
+        },
+        {
+          "name": "fdesc",
+          "description": "描述",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "描述"
+        },
+        {
+          "name": "fispreset",
+          "description": "系统预设",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "系统预设"
+        },
+        {
+          "name": "fmodifytime",
+          "description": "修改时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "修改时间"
+        }
+      ]
+    },
+    {
+      "name": "t_upm_masterstatus_l",
+      "business_name": "单件状态",
+      "description": "单件状态-多语言表",
+      "parent": "t_upm_masterstatus",
+      "references": [
+        {
+          "business_name": "单件状态",
+          "description": "单件状态-多语言表",
+          "parent": "t_upm_masterstatus"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "flocaleid",
+          "description": "flocaleid",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "localeid"
+        },
+        {
+          "name": "fdesc",
+          "description": "描述",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "描述"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "varchar",
+          "primary_key": true,
+          "remarks": "pkid"
+        }
+      ]
+    },
+    {
+      "name": "t_upm_materialrelation",
+      "business_name": "单件分配矩阵",
+      "description": "单件分配矩阵-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "单件分配矩阵",
+          "description": "单件分配矩阵-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "fmodifierid",
+          "description": "修改人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fcreatetime",
+          "description": "创建时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "创建时间"
+        },
+        {
+          "name": "fmaterialid",
+          "description": "物料",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "物料 bd_material"
+        },
+        {
+          "name": "forgid",
+          "description": "组织",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "业务单元 bos_org"
+        },
+        {
+          "name": "fmasterrelationid",
+          "description": "单件动作矩阵",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单件动作矩阵 upm_masterrelation"
+        },
+        {
+          "name": "fmodifytime",
+          "description": "修改时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "修改时间"
+        },
+        {
+          "name": "fstatus",
+          "description": "数据状态",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "数据状态,枚举: A :暂存  B :已提交  C :已审核"
+        },
+        {
+          "name": "fmasterid",
+          "description": "主数据内码",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "主数据内码"
+        },
+        {
+          "name": "fcreatorid",
+          "description": "创建人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fenable",
+          "description": "使用状态",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "使用状态,枚举: 0 :禁用  1 :可用"
+        },
+        {
+          "name": "fnumber",
+          "description": "编码",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "编码"
+        },
+        {
+          "name": "fdesc",
+          "description": "fdesc",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": ""
+        }
+      ]
+    },
+    {
+      "name": "t_upm_materialrelation_l",
+      "business_name": "单件分配矩阵",
+      "description": "单件分配矩阵-多语言表",
+      "parent": "t_upm_materialrelation",
+      "references": [
+        {
+          "business_name": "单件分配矩阵",
+          "description": "单件分配矩阵-多语言表",
+          "parent": "t_upm_materialrelation"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "flocaleid",
+          "description": "flocaleid",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "localeid"
+        },
+        {
+          "name": "fdesc",
+          "description": "fdesc",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "varchar",
+          "primary_key": true,
+          "remarks": "pkid"
+        }
+      ]
+    },
+    {
+      "name": "t_upm_movetrack",
+      "business_name": "单件移动轨迹",
+      "description": "单件移动轨迹-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "单件移动轨迹",
+          "description": "单件移动轨迹-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fcreator",
+          "description": "操作人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fusability",
+          "description": "可用性",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单件可用性 upm_usability"
+        },
+        {
+          "name": "fcreatetime",
+          "description": "创建时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "创建时间"
+        },
+        {
+          "name": "flocation",
+          "description": "位置",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单件位置 upm_location"
+        },
+        {
+          "name": "fbillentrytype",
+          "description": "单据分录标识",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "单据分录标识"
+        },
+        {
+          "name": "fsecondarystatus",
+          "description": "次要状态",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单件状态 upm_masterstatus"
+        },
+        {
+          "name": "foperate",
+          "description": "单据操作",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "单据操作"
+        },
+        {
+          "name": "fbillentryid",
+          "description": "单据分录ID",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单据分录ID"
+        },
+        {
+          "name": "faction",
+          "description": "动作编码",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单件动作 upm_masteraction"
+        },
+        {
+          "name": "fbillid",
+          "description": "单据ID",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单据ID"
+        },
+        {
+          "name": "fmainstatus",
+          "description": "主要状态",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单件状态 upm_masterstatus"
+        },
+        {
+          "name": "fmasterfileid",
+          "description": "主档ID",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单件主档 upm_masterfile"
+        },
+        {
+          "name": "fbilltype",
+          "description": "单据标识",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "主实体对象 bos_entityobject"
+        },
+        {
+          "name": "fbillno",
+          "description": "单据编号",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "单据编号"
+        }
+      ]
+    },
+    {
+      "name": "t_upm_relationentry",
+      "business_name": "单件动作矩阵",
+      "description": "动作状态矩阵-子表",
+      "parent": "t_upm_masterrelation",
+      "references": [
+        {
+          "business_name": "单件动作矩阵",
+          "description": "动作状态矩阵-子表",
+          "parent": "t_upm_masterrelation"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fisenable",
+          "description": "启用",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "启用"
+        },
+        {
+          "name": "fupdstafieldno",
+          "description": "主档状态更新字段",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "主档状态更新字段"
+        },
+        {
+          "name": "fupdstafield",
+          "description": "主档状态更新字段标识",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "主档状态更新字段标识"
+        },
+        {
+          "name": "fusability",
+          "description": "可用性",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单件可用性 upm_usability"
+        },
+        {
+          "name": "faction",
+          "description": "动作",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单件动作 upm_masteraction"
+        },
+        {
+          "name": "foldstatus",
+          "description": "旧状态",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单件状态 upm_masterstatus"
+        },
+        {
+          "name": "fnewstatus",
+          "description": "新状态",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单件状态 upm_masterstatus"
+        },
+        {
+          "name": "flocation",
+          "description": "位置",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单件位置 upm_location"
+        },
+        {
+          "name": "fseq",
+          "description": "分录行号",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "分录行号"
+        },
+        {
+          "name": "fentryid",
+          "description": "fentryid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        }
+      ]
+    },
+    {
+      "name": "t_upm_role",
+      "business_name": "单件角色",
+      "description": "单件角色-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "单件角色",
+          "description": "单件角色-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fremark",
+          "description": "描述",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "描述"
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "fmodifierid",
+          "description": "修改人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fcreatorid",
+          "description": "创建人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fcreatetime",
+          "description": "创建时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "创建时间"
+        },
+        {
+          "name": "fenable",
+          "description": "使用状态",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "使用状态,枚举: 0 :禁用  1 :可用"
+        },
+        {
+          "name": "fnumber",
+          "description": "编码",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "编码"
+        },
+        {
+          "name": "fmodifytime",
+          "description": "修改时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "修改时间"
+        }
+      ]
+    },
+    {
+      "name": "t_upm_role_l",
+      "business_name": "单件角色",
+      "description": "单件角色-多语言表",
+      "parent": "t_upm_role",
+      "references": [
+        {
+          "business_name": "单件角色",
+          "description": "单件角色-多语言表",
+          "parent": "t_upm_role"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "flocaleid",
+          "description": "flocaleid",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "localeid"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "varchar",
+          "primary_key": true,
+          "remarks": "pkid"
+        }
+      ]
+    },
+    {
+      "name": "t_upm_roleaction",
+      "business_name": "角色分配动作",
+      "description": "角色分配动作-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "角色分配动作",
+          "description": "角色分配动作-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "froleid",
+          "description": "角色",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单件角色 upm_role"
+        },
+        {
+          "name": "factionid",
+          "description": "动作",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单件动作 upm_masteraction"
+        }
+      ]
+    },
+    {
+      "name": "t_upm_roleorg",
+      "business_name": "角色分配组织",
+      "description": "角色分配组织-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "角色分配组织",
+          "description": "角色分配组织-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "froleid",
+          "description": "角色",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单件角色 upm_role"
+        },
+        {
+          "name": "forgid",
+          "description": "组织",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "业务单元 bos_org"
+        }
+      ]
+    },
+    {
+      "name": "t_upm_rolevehicle",
+      "business_name": "角色分配物料",
+      "description": "角色分配物料-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "角色分配物料",
+          "description": "角色分配物料-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "froleid",
+          "description": "角色",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单件角色 upm_role"
+        },
+        {
+          "name": "fvehiclemodid",
+          "description": "物料",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "物料 bd_material"
+        }
+      ]
+    },
+    {
+      "name": "t_upm_usability",
+      "business_name": "单件可用性",
+      "description": "单件可用性-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "单件可用性",
+          "description": "单件可用性-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "fstatus",
+          "description": "数据状态",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "数据状态,枚举: A :暂存  B :已提交  C :已审核"
+        },
+        {
+          "name": "fmodifierid",
+          "description": "修改人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fmasterid",
+          "description": "主数据内码",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "主数据内码"
+        },
+        {
+          "name": "fcreatorid",
+          "description": "创建人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fcreatetime",
+          "description": "创建时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "创建时间"
+        },
+        {
+          "name": "fenable",
+          "description": "使用状态",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "使用状态,枚举: 0 :禁用  1 :可用"
+        },
+        {
+          "name": "fnumber",
+          "description": "编码",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "编码"
+        },
+        {
+          "name": "fdesc",
+          "description": "描述",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "描述"
+        },
+        {
+          "name": "fispreset",
+          "description": "系统预设",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "系统预设"
+        },
+        {
+          "name": "fmodifytime",
+          "description": "修改时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "修改时间"
+        }
+      ]
+    },
+    {
+      "name": "t_upm_usability_l",
+      "business_name": "单件可用性",
+      "description": "单件可用性-多语言表",
+      "parent": "t_upm_usability",
+      "references": [
+        {
+          "business_name": "单件可用性",
+          "description": "单件可用性-多语言表",
+          "parent": "t_upm_usability"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "flocaleid",
+          "description": "flocaleid",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "localeid"
+        },
+        {
+          "name": "fdesc",
+          "description": "描述",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "描述"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "varchar",
+          "primary_key": true,
+          "remarks": "pkid"
+        }
+      ]
+    },
+    {
+      "name": "t_upm_userrole",
+      "business_name": "角色分配用户",
+      "description": "角色分配用户-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "角色分配用户",
+          "description": "角色分配用户-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "froleid",
+          "description": "角色",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单件角色 upm_role"
+        },
+        {
+          "name": "fuserid",
+          "description": "用户",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        }
+      ]
+    },
+    {
+      "name": "t_upm_wb_exelog",
+      "business_name": "单件工作台日志",
+      "description": "单件工作台日志-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "单件工作台日志",
+          "description": "单件工作台日志-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fstatus",
+          "description": "执行状态",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "执行状态,枚举: A :成功  B :失败  C :进行中"
+        },
+        {
+          "name": "fcreatedate",
+          "description": "执行时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "执行时间"
+        },
+        {
+          "name": "ftraceid",
+          "description": "全链路ID",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "全链路ID"
+        },
+        {
+          "name": "fexecuteinfo",
+          "description": "执行结果信息",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "执行结果信息"
+        },
+        {
+          "name": "fparameter",
+          "description": "参数",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "参数"
+        },
+        {
+          "name": "fcreatorid",
+          "description": "执行人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fentitytype",
+          "description": "操作对象类型",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "主实体对象 bos_entityobject"
+        },
+        {
+          "name": "fmasterfileid",
+          "description": "内部编码（旧）",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单件主档 upm_masterfile"
+        },
+        {
+          "name": "factionid",
+          "description": "动作",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单件动作 upm_masteraction"
+        },
+        {
+          "name": "fparameter_tag",
+          "description": "参数_详情",
+          "type": "text",
+          "primary_key": false,
+          "remarks": "参数_详情"
+        },
+        {
+          "name": "fexecuteinfo_tag",
+          "description": "执行结果信息_详情",
+          "type": "text",
+          "primary_key": false,
+          "remarks": "执行结果信息_详情"
+        }
+      ]
+    },
+    {
+      "name": "t_upm_wb_exelog_e",
+      "business_name": "单件工作台日志",
+      "description": "执行过程-子表",
+      "parent": "t_upm_wb_exelog",
+      "references": [
+        {
+          "business_name": "单件工作台日志",
+          "description": "执行过程-子表",
+          "parent": "t_upm_wb_exelog"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fissuccess",
+          "description": "是否执行成功",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "是否执行成功"
+        },
+        {
+          "name": "ftarbillid",
+          "description": "目标单据Id",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "目标单据Id"
+        },
+        {
+          "name": "fexecstatus",
+          "description": "执行状态",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "执行状态,枚举: FAIL :全部失败  BOTPSUC :BOTP下推成功  UPDSUC :单据更新成功  SUBSUC :单据提交成功  FULLSUC :全部成功"
+        },
+        {
+          "name": "factionlinenum",
+          "description": "动作行号",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "动作行号"
+        },
+        {
+          "name": "foutparameter",
+          "description": "出参",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "出参"
+        },
+        {
+          "name": "fexpmsg_tag",
+          "description": "异常信息_详情",
+          "type": "text",
+          "primary_key": false,
+          "remarks": "异常信息_详情"
+        },
+        {
+          "name": "fseq",
+          "description": "分录行号",
+          "type": "int4",
+          "primary_key": false,
+          "remarks": "分录行号"
+        },
+        {
+          "name": "factiontype",
+          "description": "动作类型",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "动作类型,枚举: PUSH :单据下推  BIZOP :调用业务操作  SERVICE :调用后台服务  CUS :自定义操作"
+        },
+        {
+          "name": "finparameter",
+          "description": "入参",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "入参"
+        },
+        {
+          "name": "fentryid",
+          "description": "fentryid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fexpmsg",
+          "description": "异常信息",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "异常信息"
+        }
+      ]
+    },
+    {
+      "name": "t_upm_wb_exelogfile",
+      "business_name": "单件工作台日志",
+      "description": "内部编码-多选基础资料表",
+      "parent": "t_upm_wb_exelog",
+      "references": [
+        {
+          "business_name": "单件工作台日志",
+          "description": "内部编码-多选基础资料表",
+          "parent": "t_upm_wb_exelog"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fbasedataid",
+          "description": "fbasedataid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "单件主档 upm_masterfile"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "pkid"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_attachment",
+      "business_name": "废品标准管理",
+      "description": "附件-附件表",
+      "parent": "t_qcbd_inspectionstd",
+      "references": [
+        {
+          "business_name": "废品标准管理",
+          "description": "附件-附件表",
+          "parent": "t_qcbd_inspectionstd"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fbasedataid",
+          "description": "fbasedataid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "附件字段实体 bd_attachment"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "FPKID"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_attmbd",
+      "business_name": "过磅单",
+      "description": "过磅单记录附件上传-附件表",
+      "parent": "tk_jml_weightinfobill",
+      "references": [
+        {
+          "business_name": "过磅单",
+          "description": "过磅单记录附件上传-附件表",
+          "parent": "tk_jml_weightinfobill"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fbasedataid",
+          "description": "fbasedataid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "附件字段实体 bd_attachment"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "FPKID"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_auditablesetting",
+      "business_name": "可审虚拟量设置",
+      "description": "可审虚拟量设置-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "可审虚拟量设置",
+          "description": "可审虚拟量设置-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "fstatus",
+          "description": "数据状态",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "数据状态,枚举: A :暂存  B :已提交  C :已审核"
+        },
+        {
+          "name": "fmodifierid",
+          "description": "修改人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fcreatorid",
+          "description": "创建人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fmasterid",
+          "description": "主数据内码",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "主数据内码"
+        },
+        {
+          "name": "fk_jml_deliveryplant",
+          "description": "发货工厂",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "发货工厂 jml_deliveryplant"
+        },
+        {
+          "name": "fcreatetime",
+          "description": "创建时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "创建时间"
+        },
+        {
+          "name": "fk_jml_audittime",
+          "description": "审核时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "审核时间"
+        },
+        {
+          "name": "fenable",
+          "description": "使用状态",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "使用状态,枚举: 0 :禁用  1 :可用"
+        },
+        {
+          "name": "fnumber",
+          "description": "编码",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "编码"
+        },
+        {
+          "name": "fmodifytime",
+          "description": "修改时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "修改时间"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_auditablesetting_l",
+      "business_name": "可审虚拟量设置",
+      "description": "可审虚拟量设置-多语言表",
+      "parent": "tk_jml_auditablesetting",
+      "references": [
+        {
+          "business_name": "可审虚拟量设置",
+          "description": "可审虚拟量设置-多语言表",
+          "parent": "tk_jml_auditablesetting"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "flocaleid",
+          "description": "flocaleid",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "localeid"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "varchar",
+          "primary_key": true,
+          "remarks": "pkid"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_auditablesettingen",
+      "business_name": "可审虚拟量设置",
+      "description": "物料明细-子表",
+      "parent": "tk_jml_auditablesetting",
+      "references": [
+        {
+          "business_name": "可审虚拟量设置",
+          "description": "物料明细-子表",
+          "parent": "tk_jml_auditablesetting"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fk_jml_materiel",
+          "description": "物料编码",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "物料 bd_material"
+        },
+        {
+          "name": "fk_jml_unit",
+          "description": "计量单位",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "计量单位 bd_measureunits"
+        },
+        {
+          "name": "fk_jml_qty",
+          "description": "数量",
+          "type": "numeric",
+          "primary_key": false,
+          "remarks": "数量"
+        },
+        {
+          "name": "fk_jml_datelose",
+          "description": "失效日期",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "失效日期"
+        },
+        {
+          "name": "fseq",
+          "description": "分录行号",
+          "type": "int4",
+          "primary_key": false,
+          "remarks": "分录行号"
+        },
+        {
+          "name": "fentryid",
+          "description": "fentryid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fk_jml_takedate",
+          "description": "生效日期",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "生效日期"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_autoallowareset",
+      "business_name": "自动分仓配置",
+      "description": "自动分仓配置-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "自动分仓配置",
+          "description": "自动分仓配置-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "fmodifierid",
+          "description": "修改人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fk_jml_deliveryplant",
+          "description": "发货工厂",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "发货工厂 jml_deliveryplant"
+        },
+        {
+          "name": "fcreatetime",
+          "description": "创建时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "创建时间"
+        },
+        {
+          "name": "fk_jml_maxdate",
+          "description": "生产日期最大差距",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "生产日期最大差距"
+        },
+        {
+          "name": "fmodifytime",
+          "description": "修改时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "修改时间"
+        },
+        {
+          "name": "fstatus",
+          "description": "数据状态",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "数据状态,枚举: A :暂存  B :已提交  C :已审核"
+        },
+        {
+          "name": "fk_jml_mergecarorder",
+          "description": "合车订单自动分仓",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "合车订单自动分仓"
+        },
+        {
+          "name": "fcreatorid",
+          "description": "创建人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fmasterid",
+          "description": "主数据内码",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "主数据内码"
+        },
+        {
+          "name": "fk_jml_entireordersatisfy",
+          "description": "整单满足",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "整单满足"
+        },
+        {
+          "name": "fenable",
+          "description": "使用状态",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "使用状态,枚举: 0 :禁用  1 :可用"
+        },
+        {
+          "name": "fnumber",
+          "description": "编码",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "编码"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_autoallowareset_e",
+      "business_name": "自动分仓配置",
+      "description": "单据体-子表",
+      "parent": "tk_jml_autoallowareset",
+      "references": [
+        {
+          "business_name": "自动分仓配置",
+          "description": "单据体-子表",
+          "parent": "tk_jml_autoallowareset"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fk_jml_warehouse1",
+          "description": "一级仓库",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "仓库 bd_warehouse"
+        },
+        {
+          "name": "fk_jml_loadingcapac",
+          "description": "装车能力",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "装车能力"
+        },
+        {
+          "name": "fseq",
+          "description": "分录行号",
+          "type": "int4",
+          "primary_key": false,
+          "remarks": "分录行号"
+        },
+        {
+          "name": "fentryid",
+          "description": "fentryid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_autoallowareset_l",
+      "business_name": "自动分仓配置",
+      "description": "自动分仓配置-多语言表",
+      "parent": "tk_jml_autoallowareset",
+      "references": [
+        {
+          "business_name": "自动分仓配置",
+          "description": "自动分仓配置-多语言表",
+          "parent": "tk_jml_autoallowareset"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "flocaleid",
+          "description": "flocaleid",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "localeid"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "varchar",
+          "primary_key": true,
+          "remarks": "pkid"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_autoallowareset_s",
+      "business_name": "自动分仓配置",
+      "description": "子单据体-子表",
+      "parent": "tk_jml_autoallowareset_e",
+      "references": [
+        {
+          "business_name": "自动分仓配置",
+          "description": "子单据体-子表",
+          "parent": "tk_jml_autoallowareset_e"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fk_jml_warehouse",
+          "description": "仓库",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "仓库 bd_warehouse"
+        },
+        {
+          "name": "fseq",
+          "description": "分录行号",
+          "type": "int4",
+          "primary_key": false,
+          "remarks": "分录行号"
+        },
+        {
+          "name": "fdetailid",
+          "description": "fdetailid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fentryid",
+          "description": "fentryid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_car_registration",
+      "business_name": "厢车登记表",
+      "description": "厢车登记表-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "厢车登记表",
+          "description": "厢车登记表-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fname",
+          "description": "车牌号",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "车牌号"
+        },
+        {
+          "name": "fmodifierid",
+          "description": "修改人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fk_jml_notes",
+          "description": "备注",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "备注"
+        },
+        {
+          "name": "fcreatetime",
+          "description": "创建时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "创建时间"
+        },
+        {
+          "name": "fmodifytime",
+          "description": "修改时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "修改时间"
+        },
+        {
+          "name": "fk_jml_cartypeinfor",
+          "description": "车型",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "车型资料 jml_bd_cartypeinfor"
+        },
+        {
+          "name": "fk_jml_phone",
+          "description": "车主手机号",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "车主手机号"
+        },
+        {
+          "name": "fstatus",
+          "description": "数据状态",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "数据状态,枚举: A :暂存  B :已提交  C :已审核"
+        },
+        {
+          "name": "fcreatorid",
+          "description": "创建人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fmasterid",
+          "description": "主数据内码",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "主数据内码"
+        },
+        {
+          "name": "fk_jml_expiringdate",
+          "description": "失效日期",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "失效日期"
+        },
+        {
+          "name": "fenable",
+          "description": "使用状态",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "使用状态,枚举: 0 :禁用  1 :可用"
+        },
+        {
+          "name": "fk_jml_effectivedate",
+          "description": "生效日期",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "生效日期"
+        },
+        {
+          "name": "fnumber",
+          "description": "编码",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "编码"
+        },
+        {
+          "name": "fk_jml_aoav",
+          "description": "车容",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "车容"
+        },
+        {
+          "name": "fk_jml_trade",
+          "description": "贸易条款",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "贸易条款 jml_trade"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_car_registration_l",
+      "business_name": "厢车登记表",
+      "description": "厢车登记表-多语言表",
+      "parent": "tk_jml_car_registration",
+      "references": [
+        {
+          "business_name": "厢车登记表",
+          "description": "厢车登记表-多语言表",
+          "parent": "tk_jml_car_registration"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fname",
+          "description": "车牌号",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "车牌号"
+        },
+        {
+          "name": "flocaleid",
+          "description": "flocaleid",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "localeid"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "varchar",
+          "primary_key": true,
+          "remarks": "pkid"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_category_copc",
+      "business_name": "合同签订品类管理",
+      "description": "合同签订品类管理-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "合同签订品类管理",
+          "description": "合同签订品类管理-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fcreateorgid",
+          "description": "创建组织",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "业务单元 bos_org"
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "fmodifierid",
+          "description": "修改人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fcreatetime",
+          "description": "创建时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "创建时间"
+        },
+        {
+          "name": "forgid",
+          "description": "组织",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "业务单元 bos_org"
+        },
+        {
+          "name": "fmultiuseorg",
+          "description": "fmultiuseorg",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fsrccreateorgid",
+          "description": "原创建组织",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "业务单元 bos_org"
+        },
+        {
+          "name": "fmodifytime",
+          "description": "修改时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "修改时间"
+        },
+        {
+          "name": "fctrlstrategy",
+          "description": "控制策略",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "控制策略,枚举: 1 :逐级分配  2 :自由分配  5 :全局共享  6 :管控范围内共享  7 :私有"
+        },
+        {
+          "name": "fstatus",
+          "description": "数据状态",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "数据状态,枚举: A :暂存  B :已提交  C :已审核"
+        },
+        {
+          "name": "fcreatorid",
+          "description": "创建人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fmasterid",
+          "description": "主数据内码",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "主数据内码"
+        },
+        {
+          "name": "fk_jml_useorg",
+          "description": "业务组织",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "业务单元 bos_org"
+        },
+        {
+          "name": "fsourcedataid",
+          "description": "原资料id",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "原资料id"
+        },
+        {
+          "name": "fk_jml_ftype",
+          "description": "类型",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "类型,枚举: A :品类  B :物料"
+        },
+        {
+          "name": "fbitindex",
+          "description": "位图",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "位图"
+        },
+        {
+          "name": "fenable",
+          "description": "使用状态",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "使用状态,枚举: 0 :禁用  1 :可用"
+        },
+        {
+          "name": "fnumber",
+          "description": "编码",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "编码"
+        },
+        {
+          "name": "fsourcebitindex",
+          "description": "原资料位图",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "原资料位图"
+        },
+        {
+          "name": "fk_jml_controlledperforma",
+          "description": "受控表现",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "受控表现,枚举: A :相同物料不允许签订合同"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_category_copc_l",
+      "business_name": "合同签订品类管理",
+      "description": "合同签订品类管理-多语言表",
+      "parent": "tk_jml_category_copc",
+      "references": [
+        {
+          "business_name": "合同签订品类管理",
+          "description": "合同签订品类管理-多语言表",
+          "parent": "tk_jml_category_copc"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "flocaleid",
+          "description": "flocaleid",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "localeid"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "varchar",
+          "primary_key": true,
+          "remarks": "pkid"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_category_copc_u",
+      "business_name": "合同签订品类管理",
+      "description": "合同签订品类管理-使用范围表",
+      "parent": "tk_jml_category_copc",
+      "references": [
+        {
+          "business_name": "合同签订品类管理",
+          "description": "合同签订品类管理-使用范围表",
+          "parent": "tk_jml_category_copc"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fcreateorgid",
+          "description": "fcreateorgid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fdataid",
+          "description": "fdataid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": ""
+        },
+        {
+          "name": "fuseorgid",
+          "description": "fuseorgid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": ""
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_categorychentity",
+      "business_name": "品类采购配额变更",
+      "description": "配额明细-子表",
+      "parent": "tk_jml_pm_purcategory_cha",
+      "references": [
+        {
+          "business_name": "品类采购配额变更",
+          "description": "配额明细-子表",
+          "parent": "tk_jml_pm_purcategory_cha"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fk_jml_fdescription",
+          "description": "备注",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "备注"
+        },
+        {
+          "name": "fseq",
+          "description": "分录行号",
+          "type": "int4",
+          "primary_key": false,
+          "remarks": "分录行号"
+        },
+        {
+          "name": "fk_jml_rank",
+          "description": "排名",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "排名"
+        },
+        {
+          "name": "fk_jml_fprocedureid",
+          "description": "工序",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "标准工序定义 mpdm_workprocedure"
+        },
+        {
+          "name": "fk_jml_fexpirydate",
+          "description": "失效日期",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "失效日期"
+        },
+        {
+          "name": "fk_jml_businesscategory",
+          "description": "业务分类",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "业务分类 jml_src_businesscategory"
+        },
+        {
+          "name": "fk_jml_fquotarate",
+          "description": "配额比例",
+          "type": "numeric",
+          "primary_key": false,
+          "remarks": "配额比例"
+        },
+        {
+          "name": "fk_jml_contractquantity",
+          "description": "合同数量",
+          "type": "numeric",
+          "primary_key": false,
+          "remarks": "合同数量"
+        },
+        {
+          "name": "fk_jml_fsupplyrank",
+          "description": "优先级",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "优先级"
+        },
+        {
+          "name": "fk_jml_fsupplierid",
+          "description": "供应商",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "供应商 bd_supplier"
+        },
+        {
+          "name": "fentryid",
+          "description": "fentryid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fk_jml_feffectdate",
+          "description": "生效日期",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "生效日期"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_ccm_returncredit",
+      "business_name": "信用返还单",
+      "description": "信用返还单-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "信用返还单",
+          "description": "信用返还单-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fmodifierid",
+          "description": "修改人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fbillstatus",
+          "description": "单据状态",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "单据状态,枚举: A :暂存  B :已提交  C :已审核"
+        },
+        {
+          "name": "fcreatetime",
+          "description": "创建时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "创建时间"
+        },
+        {
+          "name": "forgid",
+          "description": "结算组织",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "业务单元 bos_org"
+        },
+        {
+          "name": "fk_jml_remark",
+          "description": "备注",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "备注"
+        },
+        {
+          "name": "fk_jml_returnorder",
+          "description": "冲回单",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "冲回单"
+        },
+        {
+          "name": "fk_jml_quota",
+          "description": "授信额度",
+          "type": "numeric",
+          "primary_key": false,
+          "remarks": "授信额度"
+        },
+        {
+          "name": "fauditdate",
+          "description": "审核日期",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "审核日期"
+        },
+        {
+          "name": "fmodifytime",
+          "description": "修改时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "修改时间"
+        },
+        {
+          "name": "fk_jml_szf",
+          "description": "水直发业务",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "水直发业务"
+        },
+        {
+          "name": "fk_jml_reverse",
+          "description": "已冲回",
+          "type": "bpchar",
+          "primary_key": false,
+          "remarks": "已冲回"
+        },
+        {
+          "name": "fk_jml_date",
+          "description": "业务日期",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "业务日期"
+        },
+        {
+          "name": "fcreatorid",
+          "description": "创建人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fk_jml_currency",
+          "description": "币别",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "币种 bd_currency"
+        },
+        {
+          "name": "fbillno",
+          "description": "单据编号",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "单据编号"
+        },
+        {
+          "name": "fauditorid",
+          "description": "审核人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fk_jml_customer",
+          "description": "结算客户",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "客户 bd_customer"
+        },
+        {
+          "name": "fk_jml_expirationdate",
+          "description": "授信到期日",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "授信到期日"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_ccm_returncredit_lk",
+      "business_name": "信用返还单",
+      "description": "关联子实体-子表",
+      "parent": "tk_jml_ccm_returncredit",
+      "references": [
+        {
+          "business_name": "信用返还单",
+          "description": "关联子实体-子表",
+          "parent": "tk_jml_ccm_returncredit"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fsbillid",
+          "description": "源单内码",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "源单内码"
+        },
+        {
+          "name": "fstableid",
+          "description": "源单主实体编码",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "源单主实体编码"
+        },
+        {
+          "name": "fsid",
+          "description": "源单主实体内码",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "源单主实体内码"
+        },
+        {
+          "name": "fseq",
+          "description": "分录行号",
+          "type": "int4",
+          "primary_key": false,
+          "remarks": "分录行号"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_ccm_returncredit_tc",
+      "business_name": "信用返还单",
+      "description": "信用返还单-关联追踪表",
+      "parent": "tk_jml_ccm_returncredit",
+      "references": [
+        {
+          "business_name": "信用返还单",
+          "description": "信用返还单-关联追踪表",
+          "parent": "tk_jml_ccm_returncredit"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": ""
+        },
+        {
+          "name": "ftbillid",
+          "description": "ftbillid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fttableid",
+          "description": "fttableid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fsbillid",
+          "description": "fsbillid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fstableid",
+          "description": "fstableid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fsid",
+          "description": "fsid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "ftid",
+          "description": "ftid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_ccm_returncredit_wb",
+      "business_name": "信用返还单",
+      "description": "信用返还单-反写记录表",
+      "parent": "tk_jml_ccm_returncredit",
+      "references": [
+        {
+          "business_name": "信用返还单",
+          "description": "信用返还单-反写记录表",
+          "parent": "tk_jml_ccm_returncredit"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "foperate",
+          "description": "foperate",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fruleverid",
+          "description": "fruleverid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fsbillid",
+          "description": "fsbillid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fstableid",
+          "description": "fstableid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fsid",
+          "description": "fsid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fwritevalue",
+          "description": "fwritevalue",
+          "type": "numeric",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fseq",
+          "description": "fseq",
+          "type": "int4",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fentryid",
+          "description": "fentryid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": ""
+        },
+        {
+          "name": "fruleitemid",
+          "description": "fruleitemid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_ceiling",
+      "business_name": "封顶价管理",
+      "description": "封顶价管理-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "封顶价管理",
+          "description": "封顶价管理-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fmodifierid",
+          "description": "修改人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fbillstatus",
+          "description": "单据状态",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "单据状态,枚举: A :暂存  B :已提交  C :已审核"
+        },
+        {
+          "name": "fcreatetime",
+          "description": "创建时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "创建时间"
+        },
+        {
+          "name": "forgid",
+          "description": "组织",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "业务单元 bos_org"
+        },
+        {
+          "name": "fk_jml_customertype",
+          "description": "fk_jml_customertype",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fauditdate",
+          "description": "审核日期",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "审核日期"
+        },
+        {
+          "name": "fk_jml_dimension",
+          "description": "维度",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "维度,枚举: 6 :客户+商品+发货工厂  5 :客户+商品  4 :区部所+商品  3 :区部所+商品+工厂  2 :商品+工厂  1 :商品"
+        },
+        {
+          "name": "fk_jml_districtoffice",
+          "description": "区部所",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "客户分类 bd_customergroup"
+        },
+        {
+          "name": "fmodifytime",
+          "description": "修改时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "修改时间"
+        },
+        {
+          "name": "fcreatorid",
+          "description": "创建人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fbillno",
+          "description": "单据编号",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "单据编号"
+        },
+        {
+          "name": "fauditorid",
+          "description": "审核人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fk_jml_customer",
+          "description": "客户",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "客户 bd_customer"
+        },
+        {
+          "name": "fk_jml_fhgc",
+          "description": "发货工厂",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "发货工厂 jml_deliveryplant"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_ceilingentry1",
+      "business_name": "封顶价管理",
+      "description": "单据体-子表",
+      "parent": "tk_jml_ceiling",
+      "references": [
+        {
+          "business_name": "封顶价管理",
+          "description": "单据体-子表",
+          "parent": "tk_jml_ceiling"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fk_jml_materialcode",
+          "description": "物料编码",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "物料 bd_material"
+        },
+        {
+          "name": "fmodifydatefield",
+          "description": "修改时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "修改时间"
+        },
+        {
+          "name": "fk_jml_expiringdate",
+          "description": "失效日期",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "失效日期"
+        },
+        {
+          "name": "fk_jml_isenable",
+          "description": "是否启用",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "是否启用,枚举: A :创建  B :审核中  C :已审核  D :重新审核  E :启用  F :禁用"
+        },
+        {
+          "name": "fseq",
+          "description": "分录行号",
+          "type": "int4",
+          "primary_key": false,
+          "remarks": "分录行号"
+        },
+        {
+          "name": "fk_jml_effectivedate",
+          "description": "生效日期",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "生效日期"
+        },
+        {
+          "name": "fk_jml_disable",
+          "description": "fk_jml_disable",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fentryid",
+          "description": "fentryid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fmodifierfield",
+          "description": "修改人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fk_jml_ceilingpriceperuni",
+          "description": "封顶价单价",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "封顶价单价"
+        },
+        {
+          "name": "fk_jml_start",
+          "description": "fk_jml_start",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": ""
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_classgroupbackdif",
+      "business_name": "领料差异分摊",
+      "description": "班组-多选基础资料表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "领料差异分摊",
+          "description": "班组-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "调拨工作台",
+          "description": "班组-多选基础资料表",
+          "parent": "tk_jml_transferworkben"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fbasedataid",
+          "description": "fbasedataid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "班组设置 mpdm_classgroup"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "pkid"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_clausetype",
+      "business_name": "贸易条款类型",
+      "description": "贸易条款类型-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "贸易条款类型",
+          "description": "贸易条款类型-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "fstatus",
+          "description": "数据状态",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "数据状态,枚举: A :暂存  B :已提交  C :已审核"
+        },
+        {
+          "name": "fmodifierid",
+          "description": "修改人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fcreatorid",
+          "description": "创建人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fmasterid",
+          "description": "主数据内码",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "主数据内码"
+        },
+        {
+          "name": "fcreatetime",
+          "description": "创建时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "创建时间"
+        },
+        {
+          "name": "fenable",
+          "description": "使用状态",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "使用状态,枚举: 0 :禁用  1 :可用"
+        },
+        {
+          "name": "fnumber",
+          "description": "编码",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "编码"
+        },
+        {
+          "name": "fmodifytime",
+          "description": "修改时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "修改时间"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_clausetype_l",
+      "business_name": "贸易条款类型",
+      "description": "贸易条款类型-多语言表",
+      "parent": "tk_jml_clausetype",
+      "references": [
+        {
+          "business_name": "贸易条款类型",
+          "description": "贸易条款类型-多语言表",
+          "parent": "tk_jml_clausetype"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "flocaleid",
+          "description": "flocaleid",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "localeid"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "varchar",
+          "primary_key": true,
+          "remarks": "pkid"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_closaccentityobjs",
+      "business_name": "关账前更新单据日期配置",
+      "description": "实体对象范围-多选基础资料表",
+      "parent": "tk_jml_closingaccconfig",
+      "references": [
+        {
+          "business_name": "关账前更新单据日期配置",
+          "description": "实体对象范围-多选基础资料表",
+          "parent": "tk_jml_closingaccconfig"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fbasedataid",
+          "description": "fbasedataid",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "主实体对象 bos_entityobject"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "pkid"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_closingaccconfig",
+      "business_name": "关账前更新单据日期配置",
+      "description": "关账前更新单据日期配置-主表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "关账前更新单据日期配置",
+          "description": "关账前更新单据日期配置-主表",
+          "parent": ""
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "fstatus",
+          "description": "数据状态",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "数据状态,枚举: A :暂存  B :已提交  C :已审核"
+        },
+        {
+          "name": "fmodifierid",
+          "description": "修改人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fcreatorid",
+          "description": "创建人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fmasterid",
+          "description": "主数据内码",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "主数据内码"
+        },
+        {
+          "name": "fcreatetime",
+          "description": "创建时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "创建时间"
+        },
+        {
+          "name": "fenable",
+          "description": "使用状态",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "使用状态,枚举: 0 :禁用  1 :可用"
+        },
+        {
+          "name": "fnumber",
+          "description": "编码",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "编码"
+        },
+        {
+          "name": "fmodifytime",
+          "description": "修改时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "修改时间"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_closingaccconfig_l",
+      "business_name": "关账前更新单据日期配置",
+      "description": "关账前更新单据日期配置-多语言表",
+      "parent": "tk_jml_closingaccconfig",
+      "references": [
+        {
+          "business_name": "关账前更新单据日期配置",
+          "description": "关账前更新单据日期配置-多语言表",
+          "parent": "tk_jml_closingaccconfig"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fname",
+          "description": "名称",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "名称"
+        },
+        {
+          "name": "flocaleid",
+          "description": "flocaleid",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "localeid"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "varchar",
+          "primary_key": true,
+          "remarks": "pkid"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_conm_purcontlentry",
+      "business_name": "采购合同变更单",
+      "description": "履约计划-子表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "采购合同变更单",
+          "description": "履约计划-子表",
+          "parent": ""
+        },
+        {
+          "business_name": "采购合同",
+          "description": "履约计划-子表",
+          "parent": "t_conm_xpurcontract"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fk_jml_period",
+          "description": "期数",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "期数"
+        },
+        {
+          "name": "fk_jml_amount",
+          "description": "结算金额",
+          "type": "numeric",
+          "primary_key": false,
+          "remarks": "结算金额"
+        },
+        {
+          "name": "fk_jml_charge",
+          "description": "本期负责人",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fseq",
+          "description": "分录行号",
+          "type": "int4",
+          "primary_key": false,
+          "remarks": "分录行号"
+        },
+        {
+          "name": "fk_jml_milepost",
+          "description": "里程碑",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "里程碑"
+        },
+        {
+          "name": "fk_jml_endtime",
+          "description": "计划结束时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "计划结束时间"
+        },
+        {
+          "name": "fk_jml_terms_tag",
+          "description": "合同条款_详情",
+          "type": "text",
+          "primary_key": false,
+          "remarks": "合同条款_详情"
+        },
+        {
+          "name": "fk_jml_terms",
+          "description": "合同条款",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "合同条款"
+        },
+        {
+          "name": "fk_jml_settlementtime",
+          "description": "计划结算时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "计划结算时间"
+        },
+        {
+          "name": "fk_jml_starttime",
+          "description": "计划开始时间",
+          "type": "timestamp",
+          "primary_key": false,
+          "remarks": "计划开始时间"
+        },
+        {
+          "name": "fk_jml_ratio",
+          "description": "结算比例",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "结算比例"
+        },
+        {
+          "name": "fentryid",
+          "description": "fentryid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_conm_purcontractch",
+      "business_name": "采购合同变更单",
+      "description": "履约总负责人-多选基础资料表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "采购合同变更单",
+          "description": "履约总负责人-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "采购合同",
+          "description": "履约总负责人-多选基础资料表",
+          "parent": "t_conm_xpurcontract"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fbasedataid",
+          "description": "fbasedataid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "pkid"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_conm_purcontractex",
+      "business_name": "采购合同变更单",
+      "description": "外部会签人-多选基础资料表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "采购合同变更单",
+          "description": "外部会签人-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "采购合同",
+          "description": "外部会签人-多选基础资料表",
+          "parent": "t_conm_xpurcontract"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fbasedataid",
+          "description": "fbasedataid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "pkid"
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_conm_purcontractin",
+      "business_name": "采购合同变更单",
+      "description": "内部会签人-多选基础资料表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "采购合同变更单",
+          "description": "内部会签人-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "采购合同",
+          "description": "内部会签人-多选基础资料表",
+          "parent": "t_conm_xpurcontract"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fbasedataid",
+          "description": "fbasedataid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "人员 bos_user"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "pkid"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "source_table": "t_ccm_controlstatus",
+      "source_column": "froleid",
+      "target_table": "t_upm_role",
+      "target_column": "fid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "role"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_ccm_dimensionentry",
+      "source_column": "froleid",
+      "target_table": "t_upm_role",
+      "target_column": "fid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "role"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_ccm_ec_dimensions",
+      "source_column": "froleid",
+      "target_table": "t_upm_role",
+      "target_column": "fid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "role"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_masterservice_l",
+      "source_column": "fid",
+      "target_table": "t_upm_masterservice",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_masterstatus_l",
+      "source_column": "fid",
+      "target_table": "t_upm_masterstatus",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_materialrelation",
+      "source_column": "fmasterrelationid",
+      "target_table": "t_upm_masterrelation",
+      "target_column": "fid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "masterrelation"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_materialrelation",
+      "source_column": "fmaterialid",
+      "target_table": "t_im_mdc_material",
+      "target_column": "fpkid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "material"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_materialrelation",
+      "source_column": "forgid",
+      "target_table": "t_im_invcountsche_org",
+      "target_column": "fpkid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "org"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_materialrelation",
+      "source_column": "forgid",
+      "target_table": "t_im_priceconf_org",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "org"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_materialrelation_l",
+      "source_column": "fid",
+      "target_table": "t_upm_materialrelation",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_movetrack",
+      "source_column": "fmasterfileid",
+      "target_table": "t_upm_masterfile",
+      "target_column": "fid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "masterfile"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_relationentry",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_scheme_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_relationentry",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_temp_archive_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_relationentry",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchconfig_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_relationentry",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchdetail_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_relationentry",
+      "source_column": "fentryid",
+      "target_table": "t_invp_plan_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_relationentry",
+      "source_column": "fentryid",
+      "target_table": "t_iscc_autopush_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_relationentry",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_f_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_relationentry",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_m_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_relationentry",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_r_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_relationentry",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_ta_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_relationentry",
+      "source_column": "fid",
+      "target_table": "t_upm_masterrelation",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_role_l",
+      "source_column": "fid",
+      "target_table": "t_upm_role",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_roleaction",
+      "source_column": "froleid",
+      "target_table": "t_ccm_role",
+      "target_column": "fid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "role"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_roleaction",
+      "source_column": "froleid",
+      "target_table": "t_upm_role",
+      "target_column": "fid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "role"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_roleorg",
+      "source_column": "forgid",
+      "target_table": "t_im_invcountsche_org",
+      "target_column": "fpkid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "org"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_roleorg",
+      "source_column": "forgid",
+      "target_table": "t_im_priceconf_org",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "org"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_roleorg",
+      "source_column": "froleid",
+      "target_table": "t_ccm_role",
+      "target_column": "fid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "role"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_roleorg",
+      "source_column": "froleid",
+      "target_table": "t_upm_role",
+      "target_column": "fid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "role"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_rolevehicle",
+      "source_column": "froleid",
+      "target_table": "t_ccm_role",
+      "target_column": "fid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "role"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_rolevehicle",
+      "source_column": "froleid",
+      "target_table": "t_upm_role",
+      "target_column": "fid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "role"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_usability_l",
+      "source_column": "fid",
+      "target_table": "t_upm_usability",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_userrole",
+      "source_column": "froleid",
+      "target_table": "t_ccm_role",
+      "target_column": "fid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "role"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_userrole",
+      "source_column": "froleid",
+      "target_table": "t_upm_role",
+      "target_column": "fid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "role"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_wb_exelog",
+      "source_column": "fmasterfileid",
+      "target_table": "t_upm_masterfile",
+      "target_column": "fid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "masterfile"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_wb_exelog_e",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_scheme_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_wb_exelog_e",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_temp_archive_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_wb_exelog_e",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchconfig_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_wb_exelog_e",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchdetail_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_wb_exelog_e",
+      "source_column": "fentryid",
+      "target_table": "t_invp_plan_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_wb_exelog_e",
+      "source_column": "fentryid",
+      "target_table": "t_iscc_autopush_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_wb_exelog_e",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_f_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_wb_exelog_e",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_m_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_wb_exelog_e",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_r_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_wb_exelog_e",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_ta_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_wb_exelog_e",
+      "source_column": "fid",
+      "target_table": "t_upm_wb_exelog",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "t_upm_wb_exelogfile",
+      "source_column": "fid",
+      "target_table": "t_upm_wb_exelog",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_attmbd",
+      "source_column": "fid",
+      "target_table": "tk_jml_weightinfobill",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_auditablesetting_l",
+      "source_column": "fid",
+      "target_table": "tk_jml_auditablesetting",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_auditablesettingen",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_scheme_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_auditablesettingen",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_temp_archive_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_auditablesettingen",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchconfig_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_auditablesettingen",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchdetail_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_auditablesettingen",
+      "source_column": "fentryid",
+      "target_table": "t_invp_plan_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_auditablesettingen",
+      "source_column": "fentryid",
+      "target_table": "t_iscc_autopush_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_auditablesettingen",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_f_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_auditablesettingen",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_m_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_auditablesettingen",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_r_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_auditablesettingen",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_ta_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_auditablesettingen",
+      "source_column": "fid",
+      "target_table": "tk_jml_auditablesetting",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_e",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_scheme_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_e",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_temp_archive_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_e",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchconfig_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_e",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchdetail_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_e",
+      "source_column": "fentryid",
+      "target_table": "t_invp_plan_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_e",
+      "source_column": "fentryid",
+      "target_table": "t_iscc_autopush_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_e",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_f_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_e",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_m_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_e",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_r_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_e",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_ta_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_e",
+      "source_column": "fid",
+      "target_table": "tk_jml_autoallowareset",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_l",
+      "source_column": "fid",
+      "target_table": "tk_jml_autoallowareset",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_s",
+      "source_column": "fdetailid",
+      "target_table": "t_iscc_settlelog_detail",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "detail"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_s",
+      "source_column": "fdetailid",
+      "target_table": "t_ism_botpconfig_detail",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "detail"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_s",
+      "source_column": "fdetailid",
+      "target_table": "t_ism_settlelog_detail",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "detail"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_s",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_scheme_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_s",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_temp_archive_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_s",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchconfig_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_s",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchdetail_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_s",
+      "source_column": "fentryid",
+      "target_table": "t_invp_plan_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_s",
+      "source_column": "fentryid",
+      "target_table": "t_iscc_autopush_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_s",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_f_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_s",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_m_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_s",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_r_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_autoallowareset_s",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_ta_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_car_registration_l",
+      "source_column": "fid",
+      "target_table": "tk_jml_car_registration",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_category_copc",
+      "source_column": "forgid",
+      "target_table": "t_im_invcountsche_org",
+      "target_column": "fpkid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "org"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_category_copc",
+      "source_column": "forgid",
+      "target_table": "t_im_priceconf_org",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "org"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_category_copc_l",
+      "source_column": "fid",
+      "target_table": "tk_jml_category_copc",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_category_copc_u",
+      "source_column": "fdataid",
+      "target_table": "tk_jml_category_copc",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_categorychentity",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_scheme_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_categorychentity",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_temp_archive_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_categorychentity",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchconfig_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_categorychentity",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchdetail_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_categorychentity",
+      "source_column": "fentryid",
+      "target_table": "t_invp_plan_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_categorychentity",
+      "source_column": "fentryid",
+      "target_table": "t_iscc_autopush_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_categorychentity",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_f_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_categorychentity",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_m_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_categorychentity",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_r_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_categorychentity",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_ta_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_categorychentity",
+      "source_column": "fid",
+      "target_table": "tk_jml_pm_purcategory_cha",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ccm_returncredit",
+      "source_column": "forgid",
+      "target_table": "t_im_invcountsche_org",
+      "target_column": "fpkid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "org"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ccm_returncredit",
+      "source_column": "forgid",
+      "target_table": "t_im_priceconf_org",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "org"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ccm_returncredit_lk",
+      "source_column": "fid",
+      "target_table": "tk_jml_ccm_returncredit",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ccm_returncredit_tc",
+      "source_column": "fid",
+      "target_table": "tk_jml_ccm_returncredit",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ccm_returncredit_wb",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_scheme_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ccm_returncredit_wb",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_temp_archive_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ccm_returncredit_wb",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchconfig_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ccm_returncredit_wb",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchdetail_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ccm_returncredit_wb",
+      "source_column": "fentryid",
+      "target_table": "t_invp_plan_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ccm_returncredit_wb",
+      "source_column": "fentryid",
+      "target_table": "t_iscc_autopush_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ccm_returncredit_wb",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_f_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ccm_returncredit_wb",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_m_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ccm_returncredit_wb",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_r_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ccm_returncredit_wb",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_ta_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ccm_returncredit_wb",
+      "source_column": "fid",
+      "target_table": "tk_jml_ccm_returncredit",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ceiling",
+      "source_column": "forgid",
+      "target_table": "t_im_invcountsche_org",
+      "target_column": "fpkid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "org"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ceiling",
+      "source_column": "forgid",
+      "target_table": "t_im_priceconf_org",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "org"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ceilingentry1",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_scheme_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ceilingentry1",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_temp_archive_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ceilingentry1",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchconfig_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ceilingentry1",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchdetail_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ceilingentry1",
+      "source_column": "fentryid",
+      "target_table": "t_invp_plan_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ceilingentry1",
+      "source_column": "fentryid",
+      "target_table": "t_iscc_autopush_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ceilingentry1",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_f_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ceilingentry1",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_m_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ceilingentry1",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_r_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ceilingentry1",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_ta_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ceilingentry1",
+      "source_column": "fid",
+      "target_table": "tk_jml_ceiling",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_clausetype_l",
+      "source_column": "fid",
+      "target_table": "tk_jml_clausetype",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_closaccentityobjs",
+      "source_column": "fid",
+      "target_table": "tk_jml_closingaccconfig",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_closingaccconfig_l",
+      "source_column": "fid",
+      "target_table": "tk_jml_closingaccconfig",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_conm_purcontlentry",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_scheme_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_conm_purcontlentry",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_temp_archive_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_conm_purcontlentry",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchconfig_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_conm_purcontlentry",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchdetail_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_conm_purcontlentry",
+      "source_column": "fentryid",
+      "target_table": "t_invp_plan_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_conm_purcontlentry",
+      "source_column": "fentryid",
+      "target_table": "t_iscc_autopush_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_conm_purcontlentry",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_f_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_conm_purcontlentry",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_m_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_conm_purcontlentry",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_r_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_conm_purcontlentry",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_ta_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_controlledentry",
+      "source_column": "fid",
+      "target_table": "tk_jml_category_copc",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_mulorg1",
+      "source_column": "fid",
+      "target_table": "tk_jml_category_copc",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    }
+  ],
+  "metadata_conflicts": []
+}

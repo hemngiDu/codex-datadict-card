@@ -25,7 +25,8 @@ def search(model, query, config=None, limit=10):
     for table in model["tables"]:
         matches, score = [], 0
         for field, weight in (("name", 8), ("business_name", 6), ("description", 4)):
-            value = table.get(field, "").casefold()
+            value = " ".join(str(ref.get(field, "")) for ref in table.get("references", [])) + " " + table.get(field, "")
+            value = value.casefold()
             hits = sorted(t for t in terms if t in value)
             if hits:
                 score += weight * len(hits)

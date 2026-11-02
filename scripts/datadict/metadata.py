@@ -6,6 +6,7 @@ def read_excel(path):
     """Read the Kingdee catalog and every column without truncation."""
     wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
     tables = {}
+    warnings = []
     def text(value):
         return str(value).strip() if value is not None else ""
     try:
@@ -16,10 +17,11 @@ def read_excel(path):
             bo = text(row[4]) or bo
             name = text(row[6]).lower()
             if name and row[5]:
-                if name in tables:
-                    raise ValueError(f"Duplicate catalog table: {name}")
-                tables[name] = dict(name=name, business_name=bo, description=text(row[5]),
-                                    parent=text(row[7]).lower(), columns=[])
+                ref = dict(business_name=bo, description=text(row[5]), parent=text(row[7]).lower())
+                if name not in tables:
+                    tables[name] = dict(name=name, **ref, references=[], columns=[])
+                if ref not in tables[name]["references"]:
+                    tables[name]["references"].append(ref)
         for ws in wb:
             if ws.title == "表目录":
                 continue
@@ -43,13 +45,17 @@ def read_excel(path):
                     name = text(row[2]).lower()
                     if not name:
                         continue
-                    if any(c["name"] == name for c in current["columns"]):
-                        raise ValueError(f"Duplicate column: {current['name']}.{name}")
-                    current["columns"].append(dict(name=name, description=text(row[3]),
+                    column = dict(name=name, description=text(row[3]),
                         type=text(row[4]).lower(), primary_key=text(row[7]).lower() in
-                        {"是", "√", "true", "1", "yes", "y", "pk"}, remarks=text(row[10])))
+                        {"是", "√", "true", "1", "yes", "y", "pk"}, remarks=text(row[10]))
+                    existing = next ( (c for c in current["columns"] if c["name"] == name), None)
+                    if existing is None:
+                        current["columns"].append(column)
+                    elif existing != column:
+                        conflict = dict(sheet=ws.title, table=current["name"], column=column)
+                        if conflict not in warnings: warnings.append(conflict)
         if not tables:
             raise ValueError("No tables found in catalog")
-        return dict(schema_version=1, source=Path(path).name, tables=list(tables.values()))
+        return dict(schema_version=1, source=Path(path).name, tables=list(tables.values()), metadata_conflicts=warnings)
     finally:
         wb.close()

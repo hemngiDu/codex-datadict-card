@@ -1,0 +1,1665 @@
+{
+  "source": "供应链云.xlsx",
+  "tables": [
+    {
+      "name": "tk_jml_yp_dealerexpense",
+      "business_name": "销售订单",
+      "description": "经销商加价科目（饮品）-多选基础资料表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "销售订单",
+          "description": "经销商加价科目（饮品）-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "销售订单变更单",
+          "description": "经销商加价科目（饮品）-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "发货通知单",
+          "description": "经销商加价科目（饮品）-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "销售出库单",
+          "description": "经销商加价科目（饮品）-多选基础资料表",
+          "parent": "t_sm_delivernoticeentry"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fbasedataid",
+          "description": "fbasedataid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "费用项目 er_expenseitemedit"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "pkid"
+        },
+        {
+          "name": "fentryid",
+          "description": "fentryid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_yp_factoryexpense",
+      "business_name": "销售订单",
+      "description": "工厂加价科目（饮品）-多选基础资料表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "销售订单",
+          "description": "工厂加价科目（饮品）-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "销售订单变更单",
+          "description": "工厂加价科目（饮品）-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "发货通知单",
+          "description": "工厂加价科目（饮品）-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "销售出库单",
+          "description": "工厂加价科目（饮品）-多选基础资料表",
+          "parent": "t_sm_delivernoticeentry"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fbasedataid",
+          "description": "fbasedataid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "费用项目 er_expenseitemedit"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "pkid"
+        },
+        {
+          "name": "fentryid",
+          "description": "fentryid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_yp_markupexpense1",
+      "business_name": "销售订单",
+      "description": "加价1加价科目（饮品）-多选基础资料表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "销售订单",
+          "description": "加价1加价科目（饮品）-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "销售订单变更单",
+          "description": "加价1加价科目（饮品）-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "发货通知单",
+          "description": "加价1加价科目（饮品）-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "销售出库单",
+          "description": "加价1加价科目（饮品）-多选基础资料表",
+          "parent": "t_sm_delivernoticeentry"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fbasedataid",
+          "description": "fbasedataid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "费用项目 er_expenseitemedit"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "pkid"
+        },
+        {
+          "name": "fentryid",
+          "description": "fentryid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_yp_markupexpense2",
+      "business_name": "销售订单",
+      "description": "加价2加价科目（饮品）-多选基础资料表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "销售订单",
+          "description": "加价2加价科目（饮品）-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "销售订单变更单",
+          "description": "加价2加价科目（饮品）-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "发货通知单",
+          "description": "加价2加价科目（饮品）-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "销售出库单",
+          "description": "加价2加价科目（饮品）-多选基础资料表",
+          "parent": "t_sm_delivernoticeentry"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fbasedataid",
+          "description": "fbasedataid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "费用项目 er_expenseitemedit"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "pkid"
+        },
+        {
+          "name": "fentryid",
+          "description": "fentryid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_yp_markupexpense3",
+      "business_name": "销售订单",
+      "description": "加价3加价科目（饮品）-多选基础资料表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "销售订单",
+          "description": "加价3加价科目（饮品）-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "销售订单变更单",
+          "description": "加价3加价科目（饮品）-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "发货通知单",
+          "description": "加价3加价科目（饮品）-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "销售出库单",
+          "description": "加价3加价科目（饮品）-多选基础资料表",
+          "parent": "t_sm_delivernoticeentry"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fbasedataid",
+          "description": "fbasedataid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "费用项目 er_expenseitemedit"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "pkid"
+        },
+        {
+          "name": "fentryid",
+          "description": "fentryid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_yp_markupexpense4",
+      "business_name": "销售订单",
+      "description": "加价4加价科目（饮品预留）-多选基础资料表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "销售订单",
+          "description": "加价4加价科目（饮品预留）-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "销售订单变更单",
+          "description": "加价4加价科目（饮品预留）-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "发货通知单",
+          "description": "加价4加价科目（饮品预留）-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "销售出库单",
+          "description": "加价4加价科目（饮品预留）-多选基础资料表",
+          "parent": "t_sm_delivernoticeentry"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fbasedataid",
+          "description": "fbasedataid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "费用项目 er_expenseitemedit"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "pkid"
+        },
+        {
+          "name": "fentryid",
+          "description": "fentryid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_ypexpense",
+      "business_name": "销售订单",
+      "description": "饮品费用科目-多选基础资料表",
+      "parent": "",
+      "references": [
+        {
+          "business_name": "销售订单",
+          "description": "饮品费用科目-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "销售订单变更单",
+          "description": "饮品费用科目-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "发货通知单",
+          "description": "饮品费用科目-多选基础资料表",
+          "parent": ""
+        },
+        {
+          "business_name": "销售出库单",
+          "description": "饮品费用科目-多选基础资料表",
+          "parent": "t_sm_delivernoticeentry"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fbasedataid",
+          "description": "fbasedataid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": "费用项目 er_expenseitemedit"
+        },
+        {
+          "name": "fpkid",
+          "description": "fpkid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "pkid"
+        },
+        {
+          "name": "fentryid",
+          "description": "fentryid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        }
+      ]
+    },
+    {
+      "name": "tk_jml_ys",
+      "business_name": "采购验收单",
+      "description": "验收清单-子表",
+      "parent": "t_pm_puracceptbill",
+      "references": [
+        {
+          "business_name": "采购验收单",
+          "description": "验收清单-子表",
+          "parent": "t_pm_puracceptbill"
+        }
+      ],
+      "columns": [
+        {
+          "name": "fid",
+          "description": "fid",
+          "type": "int8",
+          "primary_key": false,
+          "remarks": ""
+        },
+        {
+          "name": "fk_jml_yaoqiu",
+          "description": "要求及参数",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "要求及参数"
+        },
+        {
+          "name": "fk_jml_pp",
+          "description": "品牌及规格",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "品牌及规格"
+        },
+        {
+          "name": "fseq",
+          "description": "分录行号",
+          "type": "int4",
+          "primary_key": false,
+          "remarks": "分录行号"
+        },
+        {
+          "name": "fk_jml_hxbj",
+          "description": "设备核心部件",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "设备核心部件"
+        },
+        {
+          "name": "fk_jml_caizhixf",
+          "description": "材质是否相符",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "材质是否相符,枚举: 1 :是  0 :否"
+        },
+        {
+          "name": "fk_jml_yanshoujiel",
+          "description": "验收结论",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "验收结论,枚举: 1 :合格  0 :不合格"
+        },
+        {
+          "name": "fk_jml_yanshoubz",
+          "description": "备注",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "备注"
+        },
+        {
+          "name": "fentryid",
+          "description": "fentryid",
+          "type": "int8",
+          "primary_key": true,
+          "remarks": "id"
+        },
+        {
+          "name": "fk_jml_yanshousl",
+          "description": "数量",
+          "type": "varchar",
+          "primary_key": false,
+          "remarks": "数量"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "source_table": "tk_jml_yp_dealerexpense",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_scheme_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_dealerexpense",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_temp_archive_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_dealerexpense",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchconfig_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_dealerexpense",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchdetail_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_dealerexpense",
+      "source_column": "fentryid",
+      "target_table": "t_invp_plan_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_dealerexpense",
+      "source_column": "fentryid",
+      "target_table": "t_iscc_autopush_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_dealerexpense",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_f_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_dealerexpense",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_m_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_dealerexpense",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_r_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_dealerexpense",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_ta_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_factoryexpense",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_scheme_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_factoryexpense",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_temp_archive_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_factoryexpense",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchconfig_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_factoryexpense",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchdetail_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_factoryexpense",
+      "source_column": "fentryid",
+      "target_table": "t_invp_plan_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_factoryexpense",
+      "source_column": "fentryid",
+      "target_table": "t_iscc_autopush_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_factoryexpense",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_f_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_factoryexpense",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_m_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_factoryexpense",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_r_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_factoryexpense",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_ta_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense1",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_scheme_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense1",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_temp_archive_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense1",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchconfig_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense1",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchdetail_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense1",
+      "source_column": "fentryid",
+      "target_table": "t_invp_plan_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense1",
+      "source_column": "fentryid",
+      "target_table": "t_iscc_autopush_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense1",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_f_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense1",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_m_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense1",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_r_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense1",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_ta_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense2",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_scheme_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense2",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_temp_archive_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense2",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchconfig_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense2",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchdetail_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense2",
+      "source_column": "fentryid",
+      "target_table": "t_invp_plan_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense2",
+      "source_column": "fentryid",
+      "target_table": "t_iscc_autopush_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense2",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_f_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense2",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_m_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense2",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_r_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense2",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_ta_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense3",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_scheme_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense3",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_temp_archive_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense3",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchconfig_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense3",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchdetail_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense3",
+      "source_column": "fentryid",
+      "target_table": "t_invp_plan_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense3",
+      "source_column": "fentryid",
+      "target_table": "t_iscc_autopush_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense3",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_f_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense3",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_m_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense3",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_r_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense3",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_ta_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense4",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_scheme_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense4",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_temp_archive_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense4",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchconfig_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense4",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchdetail_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense4",
+      "source_column": "fentryid",
+      "target_table": "t_invp_plan_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense4",
+      "source_column": "fentryid",
+      "target_table": "t_iscc_autopush_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense4",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_f_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense4",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_m_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense4",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_r_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_yp_markupexpense4",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_ta_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ypexpense",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_scheme_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ypexpense",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_temp_archive_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ypexpense",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchconfig_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ypexpense",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchdetail_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ypexpense",
+      "source_column": "fentryid",
+      "target_table": "t_invp_plan_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ypexpense",
+      "source_column": "fentryid",
+      "target_table": "t_iscc_autopush_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ypexpense",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_f_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ypexpense",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_m_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ypexpense",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_r_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ypexpense",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_ta_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ys",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_scheme_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ys",
+      "source_column": "fentryid",
+      "target_table": "t_ccm_temp_archive_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ys",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchconfig_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ys",
+      "source_column": "fentryid",
+      "target_table": "t_invp_matchdetail_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ys",
+      "source_column": "fentryid",
+      "target_table": "t_invp_plan_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ys",
+      "source_column": "fentryid",
+      "target_table": "t_iscc_autopush_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ys",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_f_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ys",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_m_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ys",
+      "source_column": "fentryid",
+      "target_table": "t_mobsm_r_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ys",
+      "source_column": "fentryid",
+      "target_table": "tk_jml_ta_entry",
+      "target_column": "fentryid",
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "source": "naming",
+          "detail": "entry"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    },
+    {
+      "source_table": "tk_jml_ys",
+      "source_column": "fid",
+      "target_table": "t_pm_puracceptbill",
+      "target_column": "fid",
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source": "kingdee_catalog",
+          "detail": "catalog parent + conventional column; verify with model"
+        }
+      ],
+      "cardinality": "unknown",
+      "status": "candidate"
+    }
+  ],
+  "metadata_conflicts": []
+}
