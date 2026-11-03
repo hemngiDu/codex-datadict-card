@@ -12,6 +12,32 @@ Codex 会自行读取 Excel、建立语义模型、搜索候选表并解释结�
 
 首次安装：把此仓库放到 Codex 的 `skills/codex-datadict-card` 目录，让 Codex 重新加载技能。你也可以直接让 Codex 帮你安装。安装一次后，日常只需提供 Excel 和问题；Python 依赖由 Codex 按 Skill 指引处理。
 
+## WorkBuddy 和 Google AI Studio 使用
+
+### WorkBuddy：创建数脉助手专家
+
+1. 在仓库页面选择 **Code → Download ZIP**，下载最新版本，确保包含 `SKILL.md`、`scripts/` 和 `knowledge/`。
+2. WorkBuddy 左侧选择 **专家·技能·连接器 → 技能 → 添加技能 → 上传技能**，导入技能包。不同版本的菜单名称可能有所不同。
+3. 打开 **专家 → 我的专家 → 创建专家**，让创建对话创建名为“数脉助手”的专家，要求它使用 `codex-datadict-card` 技能并能读取本仓库的 `knowledge/`。可参照 [WorkBuddy 专家说明](https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Expert-Center)。
+4. 召唤专家，输入“采购计划”或“收入确认单”，首次测试可明确要求“使用数脉助手技能，读取知识库，生成宽表 SQL”。核对专家实际能访问知识库；技能导入不保证专家自动绑定全部资源。
+5. 提供目标数据库、目标表、数仓来源表映射及装载策略。没有这些信息时输出 TODO，不可直接执行。仓库更新后需更新本地技能及知识库。
+
+### Google AI Studio：基于仓库创建应用
+
+本仓库是技能、知识库和 Python 脚本，不是现成的 AI Studio 网页应用。打开 [Google AI Studio](https://aistudio.google.com/)，在 Build 模式选择输入框的 **+ → Import from GitHub**，选择本仓库；按界面提示连接 GitHub。导入后让 AI Studio 阅读 `SKILL.md` 和 `knowledge/`，实现按业务名称检索、关系依据展示、SQL 生成及下载的应用。先预览测试，不要默认部署或推送修改。具体操作见 [Google 官方 Build 模式文档](https://ai.google.dev/gemini-api/docs/aistudio-build-mode)。
+
+可在导入后使用以下提示：
+
+```text
+请基于当前项目创建“数脉助手”网页。读取 SKILL.md 及 knowledge，支持输入业务对象、检索数据字典、显示候选关联和依据，并按 SKILL.md 生成单个宽表 SQL 文件。支持复制和下载；缺少数仓表名、关联证据或装载策略时标记 TODO，不执行 SQL。先预览测试，不部署、不推送 GitHub。
+```
+
+导入代码不保证自动运行 Python 脚本、正确检索整个知识库或生成可执行 SQL。请使用采购计划、收入确认单等实际业务核对生成结果；部署和模型调用可能产生费用。
+
+### 数据和关系说明
+
+知识库由公开仓库提供，所有上传内容均可被访问。字段备注、目录关系和历史 SQL 推断出的关系均需结合业务模型和实际数据库验证；SQL 尚需核对目标表、数据粒度、组织及状态口径，不自动连接数据库或执行。
+
 ## 命令行使用（可选）
 
 Python 3.10+：
