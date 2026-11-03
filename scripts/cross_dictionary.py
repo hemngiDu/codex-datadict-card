@@ -32,7 +32,10 @@ def main():
    for entity in dict.fromkeys(tokens):
     targets=entities.get(entity,[])
     item={'source_table':t['name'],'source_column':c['name'],'entity':entity,'remark':remark,'target_workbook':Path(a.target_excel).name,'targets':targets}
-    if len(targets)==1 and len(targets[0]['primary_keys'])==1:
+    if '枚举' in remark:
+     item['reason']='enumeration or polymorphic type; not a direct foreign-key value'
+     unresolved.append(item)
+    elif len(targets)==1 and len(targets[0]['primary_keys'])==1:
      item.update(target_table=targets[0]['table'],target_column=targets[0]['primary_keys'][0],status='candidate',evidence='field remark + exact worksheet entity identifier + main table primary key')
      relations.append(item)
     else:
