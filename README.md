@@ -1,6 +1,6 @@
 # Codex 数据库语义理解 Skill
 
-从金蝶云苍穹 Excel 数据字典查找表、定位字段、读取局部上下文并发现关联候选，兼容原有 SQL Comment 和 D3 图谱。
+从金蝶云苍穹 Excel 数据字典查找表、定位字段、读取局部上下文并发现关联候选，支持 SQL 注释生成。
 
 ## 给 Codex 使用（推荐）
 
@@ -8,7 +8,7 @@
 
 > 这是供应链数据字典。帮我找“采购订单的供应商、物料和采购数量”涉及哪些表、字段和关联；标出推断关系的证据。
 
-Codex 会自行读取 Excel、建立语义模型、搜索候选表并解释结果。只有你要求“生成图谱/注释 SQL”时才生成这些文件。无须记住 build、search、context 命令。关联是候选，实际 SQL 还需核对业务条件。
+Codex 会自行读取 Excel、建立语义模型、搜索候选表并解释结果。只有你要求“生成注释 SQL”时才生成这些文件。无须记住 build、search、context 命令。关联是候选，实际 SQL 还需核对业务条件。
 
 首次安装：把此仓库放到 Codex 的 `skills/codex-datadict-card` 目录，让 Codex 重新加载技能。你也可以直接让 Codex 帮你安装。安装一次后，日常只需提供 Excel 和问题；Python 依赖由 Codex 按 Skill 指引处理。
 
@@ -70,18 +70,10 @@ python scripts/semantic.py build demo/sample.xlsx --output demo/model.json --con
 
 | 入口 | 输出 |
 |---|---|
-| generate_all.py / main.py | 每个 Excel 的 SQL、语义 JSON 和独立 `<名称>_graph/` 目录 |
+| generate_all.py / main.py | 每个 Excel 的 SQL 和语义 JSON |
 | generate_sql.py | Excel 同目录 `*_comments.sql`（PostgreSQL） |
-| generate_search_graph.py | Excel 同目录 graph.html、index.json、chunks/、columns/ |
 
-`generate_all.py` 也接受目录，按文件名顺序处理全部 xlsx，忽略 `~$` 临时文件。独立图谱目录防止多工作簿输出互相覆盖。图谱运行：
-
-```bash
-cd demo/sample_graph
-python -m http.server 8080
-```
-
-浏览器访问 http://localhost:8080/graph.html，需要联网加载 D3。其他历史图谱脚本保留。旧 ER/D3 的库存跨表关系仍是历史规则，不应视为经过验证的关系。
+`generate_all.py` 也接受目录，按文件名顺序处理全部 xlsx，忽略 `~$` 临时文件。
 
 ## 目录与测试
 
@@ -98,8 +90,4 @@ references/            数据契约与扩展说明
 python -m unittest discover -s tests -v
 ```
 
-测试覆盖候选表排序、字段命中、类型冲突、复合主键保守处理、SQL 作用域与表达式过滤及 Excel→SQL/D3/语义 JSON。当前未用真实客户工作簿或数据库验证。检索逐表扫描，内存保存元数据，尚未对 5 万表做性能承诺；大型部署可按同一模型接口引入倒排索引。
-
-## 图谱中的字段级候选关系
-
-运行 `python scripts/generate_all.py demo/sample.xlsx --sql examples/joins.sql --dialect postgres`。`--sql` 支持多个文件，`--config` 可指定手工关系配置。搜索后加载一跳候选邻居，连线显示字段；鼠标悬停查看 JOIN 条件及证据。所有关系均需核对，SQL 仅解析不执行。图谱需要本地 HTTP 服务及 D3 CDN。
+测试覆盖候选表排序、字段命中、类型冲突、复合主键保守处理、SQL 作用域与表达式过滤及 Excel→SQL/语义 JSON。当前未用真实客户工作簿或数据库验证。检索逐表扫描，内存保存元数据，尚未对 5 万表做性能承诺；大型部署可按同一模型接口引入倒排索引。

@@ -25,22 +25,7 @@ def main():
         if args.dialect: command += ["--dialect", args.dialect]
         if args.sql: command += ["--sql", *args.sql]
         subprocess.run(command, check=True)
-        for name in ("generate_sql.py", "generate_search_graph.py"):
-            # Separate graph directories prevent multi-workbook index/chunk collisions.
-            if name == "generate_search_graph.py":
-                import shutil
-                target = file.parent / (file.stem + "_graph")
-                target.mkdir(exist_ok=True)
-                import tempfile
-                with tempfile.NamedTemporaryFile(suffix=".xlsx", dir=target, delete=False) as temporary:
-                    graph_input = Path(temporary.name)
-                shutil.copy2(file, graph_input)
-                try:
-                    subprocess.run([sys.executable, str(scripts / name), str(graph_input), str(model)], check=True)
-                finally:
-                    graph_input.unlink()
-            else:
-                subprocess.run([sys.executable, str(scripts / name), str(file)], check=True)
+        subprocess.run([sys.executable, str(scripts / "generate_sql.py"), str(file)], check=True)
     print("Done")
 
 

@@ -75,8 +75,8 @@ class SemanticTests(unittest.TestCase):
         create(self.path.parent / "second.xlsx")
         run = subprocess.run([sys.executable, str(ROOT / "scripts/main.py"), str(self.path.parent)], capture_output=True)
         self.assertEqual(run.returncode, 0, run.stderr)
-        self.assertTrue((self.path.parent / "second_graph/index.json").exists())
-        self.assertTrue((self.path.parent / "sample_graph/index.json").exists())
+        self.assertTrue((self.path.parent / "second_semantic.json").exists())
+        self.assertTrue((self.path.parent / "sample_semantic.json").exists())
         self.path.write_bytes(b"not a workbook")
         run = subprocess.run([sys.executable, str(ROOT / "scripts/main.py"), str(self.path)], capture_output=True)
         self.assertNotEqual(run.returncode, 0)
@@ -90,10 +90,6 @@ class SemanticTests(unittest.TestCase):
         wb.save(self.path)
         wb.close()
         self.assertEqual(len(read_excel(self.path)["tables"][0]["columns"]), 63)
-        run = subprocess.run([sys.executable, str(ROOT / "scripts/generate_search_graph.py"), str(self.path)], capture_output=True)
-        self.assertEqual(run.returncode, 0, run.stderr)
-        columns = json.loads((self.path.parent / "columns/t_pm_purorder.json").read_text(encoding="utf-8"))
-        self.assertEqual(len(columns), 63)
 
     def test_cli_and_legacy_outputs(self):
         run = subprocess.run([sys.executable, str(ROOT / "scripts/generate_all.py"), str(self.path)], capture_output=True, text=True)
@@ -101,8 +97,7 @@ class SemanticTests(unittest.TestCase):
         base = self.path.parent
         self.assertIn('comment on column "t_pm_purorder"."fsupplierid"', (base / "sample_comments.sql").read_text(encoding="utf-8"))
         self.assertFalse((base / "sample_datadict_card.md").exists())
-        self.assertTrue((base / "sample_graph/graph.html").exists())
-        self.assertEqual(len(json.loads((base / "sample_graph/index.json").read_text(encoding="utf-8"))), 3)
+        self.assertFalse((base / "sample_graph").exists())
         model = base / "sample_semantic.json"
         run = subprocess.run([sys.executable, str(ROOT / "scripts/semantic.py"), "context", str(model), "t_pm_purorder"], capture_output=True, text=True, encoding="utf-8")
         self.assertEqual(run.returncode, 0, run.stderr)
