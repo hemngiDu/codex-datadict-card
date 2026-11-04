@@ -1,6 +1,6 @@
 # Codex 数据库语义理解 Skill
 
-从金蝶云苍穹 Excel 数据字典查找表、定位字段、读取局部上下文并发现关联候选，兼容原有 SQL Comment、Markdown/Mermaid ER 和 D3 图谱。
+从金蝶云苍穹 Excel 数据字典查找表、定位字段、读取局部上下文并发现关联候选，兼容原有 SQL Comment 和 D3 图谱。
 
 ## 给 Codex 使用（推荐）
 
@@ -8,7 +8,7 @@
 
 > 这是供应链数据字典。帮我找“采购订单的供应商、物料和采购数量”涉及哪些表、字段和关联；标出推断关系的证据。
 
-Codex 会自行读取 Excel、建立语义模型、搜索候选表并解释结果。只有你要求“生成卡片/图谱/注释 SQL”时才生成这些文件。无须记住 build、search、context 命令。关联是候选，实际 SQL 还需核对业务条件。
+Codex 会自行读取 Excel、建立语义模型、搜索候选表并解释结果。只有你要求“生成图谱/注释 SQL”时才生成这些文件。无须记住 build、search、context 命令。关联是候选，实际 SQL 还需核对业务条件。
 
 首次安装：把此仓库放到 Codex 的 `skills/codex-datadict-card` 目录，让 Codex 重新加载技能。你也可以直接让 Codex 帮你安装。安装一次后，日常只需提供 Excel 和问题；Python 依赖由 Codex 按 Skill 指引处理。
 
@@ -70,9 +70,8 @@ python scripts/semantic.py build demo/sample.xlsx --output demo/model.json --con
 
 | 入口 | 输出 |
 |---|---|
-| generate_all.py / main.py | 每个 Excel 的 SQL、Markdown、语义 JSON 和独立 `<名称>_graph/` 目录 |
+| generate_all.py / main.py | 每个 Excel 的 SQL、语义 JSON 和独立 `<名称>_graph/` 目录 |
 | generate_sql.py | Excel 同目录 `*_comments.sql`（PostgreSQL） |
-| generate_card.py | Excel 同目录 `*_datadict_card.md`，含 Mermaid ER |
 | generate_search_graph.py | Excel 同目录 graph.html、index.json、chunks/、columns/ |
 
 `generate_all.py` 也接受目录，按文件名顺序处理全部 xlsx，忽略 `~$` 临时文件。独立图谱目录防止多工作簿输出互相覆盖。图谱运行：
@@ -99,7 +98,7 @@ references/            数据契约与扩展说明
 python -m unittest discover -s tests -v
 ```
 
-测试覆盖候选表排序、字段命中、类型冲突、复合主键保守处理、SQL 作用域与表达式过滤及 Excel→SQL/Markdown/D3/语义 JSON。当前未用真实客户工作簿或数据库验证。检索逐表扫描，内存保存元数据，尚未对 5 万表做性能承诺；大型部署可按同一模型接口引入倒排索引。
+测试覆盖候选表排序、字段命中、类型冲突、复合主键保守处理、SQL 作用域与表达式过滤及 Excel→SQL/D3/语义 JSON。当前未用真实客户工作簿或数据库验证。检索逐表扫描，内存保存元数据，尚未对 5 万表做性能承诺；大型部署可按同一模型接口引入倒排索引。
 
 ## 图谱中的字段级候选关系
 

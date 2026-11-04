@@ -100,7 +100,7 @@ class SemanticTests(unittest.TestCase):
         self.assertEqual(run.returncode, 0, run.stderr)
         base = self.path.parent
         self.assertIn('comment on column "t_pm_purorder"."fsupplierid"', (base / "sample_comments.sql").read_text(encoding="utf-8"))
-        self.assertIn("erDiagram", (base / "sample_datadict_card.md").read_text(encoding="utf-8"))
+        self.assertFalse((base / "sample_datadict_card.md").exists())
         self.assertTrue((base / "sample_graph/graph.html").exists())
         self.assertEqual(len(json.loads((base / "sample_graph/index.json").read_text(encoding="utf-8"))), 3)
         model = base / "sample_semantic.json"

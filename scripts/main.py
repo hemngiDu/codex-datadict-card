@@ -25,7 +25,7 @@ def main():
         if args.dialect: command += ["--dialect", args.dialect]
         if args.sql: command += ["--sql", *args.sql]
         subprocess.run(command, check=True)
-        for name in ("generate_sql.py", "generate_card.py", "generate_search_graph.py"):
+        for name in ("generate_sql.py", "generate_search_graph.py"):
             # Separate graph directories prevent multi-workbook index/chunk collisions.
             if name == "generate_search_graph.py":
                 import shutil
