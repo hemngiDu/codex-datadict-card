@@ -105,3 +105,7 @@ CREATE TABLE、COMMENT ON、INSERT、SELECT 保持同一套字段与顺序，说
 参考用户提供的单表 STG 到 SDI 示例：按已确认的业务键，使用 DELETE FROM 目标表 a USING 来源表 b WHERE a.业务键 = b.业务键，随后插入来源批次。不假设所有表键都是 fid；核对源目标映射、方言、业务键、来源每键唯一性、字段及删除和插入范围。确保重跑幂等并核对失败恢复；此方式不自动处理源端删除。
 
 多源宽表须确认各表变化如何映射至受影响的目标业务键，考虑维度变化、迟到及删除。缺少业务键、来源批次、删除语义或表映射时，在文件中标记 NEED_CONFIRM/TODO，不生成无范围删除或伪造可执行条件；不要自动执行 SQL。
+
+## 制造云知识库
+
+制造业务对象及表可通过 `knowledge/manufacturing/index.json` 和对应分块检索；`knowledge/manufacturing/base-service-relations.json` 记录备注实体到基础服务云的候选关联和未解析项。关联仍需核验，枚举实体不能直接作为连接字段，字段冲突需报告。
